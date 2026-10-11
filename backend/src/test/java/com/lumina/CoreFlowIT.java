@@ -22,7 +22,6 @@ import org.springframework.util.LinkedMultiValueMap;
 import org.testcontainers.containers.MongoDBContainer;
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
-import org.testcontainers.junit.jupiter.Testcontainers.DisabledWithoutDocker;
 
 import java.time.Instant;
 import java.util.Map;

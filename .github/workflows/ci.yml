@@ -16,7 +16,17 @@ jobs:
           cache: maven
       - name: Test backend
         working-directory: backend
-        run: mvn -B test
+        run: |
+          set +e
+          mvn -B test > ../mvn-test.log 2>&1
+          code=$?
+          tail -n 120 ../mvn-test.log
+          if [ "$code" -ne 0 ]; then
+            grep -E "ERROR|error:|COMPILATION ERROR|cannot find symbol|does not exist|Tests run:|BUILD FAILURE" ../mvn-test.log | head -n 40 | while IFS= read -r line; do
+              echo "::error title=maven::${line}"
+            done
+            exit "$code"
+          fi
 
   frontend:
     runs-on: ubuntu-latest

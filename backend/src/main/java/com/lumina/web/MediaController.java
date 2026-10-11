@@ -8,6 +8,7 @@ import com.lumina.media.MediaService;
 import com.lumina.security.AuthUser;
 import com.lumina.security.SecurityUtils;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;

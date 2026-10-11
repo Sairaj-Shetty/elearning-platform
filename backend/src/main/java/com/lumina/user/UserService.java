@@ -6,6 +6,7 @@ import com.lumina.api.Views.InstructorPublic;
 import com.lumina.api.Views.LinkView;
 import com.lumina.api.Views.UserView;
 import com.lumina.common.Errors;
+import com.lumina.course.CourseCardFactory;
 import com.lumina.domain.Course;
 import com.lumina.domain.Enums.AccountStatus;
 import com.lumina.domain.Enums.CourseStatus;
