@@ -1,0 +1,4903 @@
+{
+  "categories": [
+    {
+      "slug": "programming",
+      "name": "Programming",
+      "domain": "TECHNICAL",
+      "description": "Languages and practical software construction.",
+      "children": [
+        {
+          "slug": "python",
+          "name": "Python",
+          "description": "Python for scripting, data, and application code."
+        },
+        {
+          "slug": "java",
+          "name": "Java",
+          "description": "Java language and Spring Boot services."
+        },
+        {
+          "slug": "cpp",
+          "name": "C and C++",
+          "description": "Systems programming with C and C++."
+        },
+        {
+          "slug": "web",
+          "name": "Web development",
+          "description": "Frontend, backend, and full-stack web skills."
+        }
+      ]
+    },
+    {
+      "slug": "computer-science",
+      "name": "Computer Science",
+      "domain": "TECHNICAL",
+      "description": "Foundations used across software systems.",
+      "children": [
+        {
+          "slug": "dsa",
+          "name": "Data structures and algorithms",
+          "description": "How to organize data and reason about cost."
+        },
+        {
+          "slug": "databases",
+          "name": "Databases",
+          "description": "Relational design, SQL, and MongoDB."
+        },
+        {
+          "slug": "os",
+          "name": "Operating systems",
+          "description": "Processes, memory, and files."
+        },
+        {
+          "slug": "networks",
+          "name": "Computer networks",
+          "description": "How data moves across machines."
+        }
+      ]
+    },
+    {
+      "slug": "data-ai",
+      "name": "Data and AI",
+      "domain": "TECHNICAL",
+      "description": "Analysis, machine learning, and generative AI.",
+      "children": [
+        {
+          "slug": "ai",
+          "name": "Artificial intelligence",
+          "description": "Search, knowledge, and intelligent systems."
+        },
+        {
+          "slug": "ml",
+          "name": "Machine learning",
+          "description": "Models that learn from examples."
+        },
+        {
+          "slug": "genai",
+          "name": "Generative AI",
+          "description": "Large language models and responsible use."
+        },
+        {
+          "slug": "data-science",
+          "name": "Data science",
+          "description": "Questions, data, and evidence."
+        }
+      ]
+    },
+    {
+      "slug": "cloud-security",
+      "name": "Cloud and Security",
+      "domain": "TECHNICAL",
+      "description": "Deployment, operations, and defensive security.",
+      "children": [
+        {
+          "slug": "cloud",
+          "name": "Cloud computing",
+          "description": "Shared infrastructure and cloud design."
+        },
+        {
+          "slug": "devops",
+          "name": "DevOps and Docker",
+          "description": "Containers, builds, and delivery."
+        },
+        {
+          "slug": "security",
+          "name": "Cybersecurity",
+          "description": "Threats, controls, and safe habits."
+        }
+      ]
+    },
+    {
+      "slug": "design-tech",
+      "name": "Design Technology",
+      "domain": "TECHNICAL",
+      "description": "Interface design and digital production tools.",
+      "children": [
+        {
+          "slug": "ui-ux",
+          "name": "UI/UX design",
+          "description": "Interfaces people can actually use."
+        },
+        {
+          "slug": "3d",
+          "name": "3D modeling",
+          "description": "Modeling and animation fundamentals."
+        },
+        {
+          "slug": "vfx",
+          "name": "VFX and CGI",
+          "description": "Visual effects pipelines and critique."
+        }
+      ]
+    },
+    {
+      "slug": "communication",
+      "name": "Communication",
+      "domain": "NON_TECHNICAL",
+      "description": "Speaking, writing, and everyday professional communication.",
+      "children": [
+        {
+          "slug": "communication-skills",
+          "name": "Communication skills",
+          "description": "Clear messages in study and work."
+        },
+        {
+          "slug": "spoken-english",
+          "name": "Spoken English",
+          "description": "Confidence and clarity in spoken English."
+        },
+        {
+          "slug": "public-speaking",
+          "name": "Public speaking",
+          "description": "Talks, demos, and presentations."
+        }
+      ]
+    },
+    {
+      "slug": "business",
+      "name": "Business",
+      "domain": "NON_TECHNICAL",
+      "description": "How small teams create and explain value.",
+      "children": [
+        {
+          "slug": "entrepreneurship",
+          "name": "Entrepreneurship",
+          "description": "From idea to a testable offer."
+        },
+        {
+          "slug": "digital-marketing",
+          "name": "Digital marketing",
+          "description": "Audiences, messages, and measurement."
+        },
+        {
+          "slug": "personal-finance",
+          "name": "Personal finance",
+          "description": "Money decisions for students."
+        }
+      ]
+    },
+    {
+      "slug": "career",
+      "name": "Career",
+      "domain": "NON_TECHNICAL",
+      "description": "Work habits, leadership, and job search.",
+      "children": [
+        {
+          "slug": "productivity",
+          "name": "Productivity",
+          "description": "Time, focus, and sustainable work."
+        },
+        {
+          "slug": "leadership",
+          "name": "Leadership",
+          "description": "Teams, feedback, and ownership."
+        },
+        {
+          "slug": "career-development",
+          "name": "Career development",
+          "description": "Choices after the classroom."
+        },
+        {
+          "slug": "interview-prep",
+          "name": "Interview preparation",
+          "description": "Stories, practice, and follow-up."
+        }
+      ]
+    },
+    {
+      "slug": "creative",
+      "name": "Creative Arts",
+      "domain": "NON_TECHNICAL",
+      "description": "Writing, photography, and visual craft.",
+      "children": [
+        {
+          "slug": "creative-writing",
+          "name": "Creative writing",
+          "description": "Scenes, voice, and revision."
+        },
+        {
+          "slug": "photography",
+          "name": "Photography",
+          "description": "Light, composition, and editing."
+        },
+        {
+          "slug": "graphic-design",
+          "name": "Graphic design",
+          "description": "Type, layout, and visual hierarchy."
+        }
+      ]
+    }
+  ],
+  "courses": [
+    {
+      "slug": "python-programming",
+      "title": "Python Programming",
+      "domain": "TECHNICAL",
+      "category": "python",
+      "difficulty": "BEGINNER",
+      "instructor": "meera",
+      "shortDescription": "Write clear Python for small, real programs.",
+      "description": "A first programming course that treats Python as a tool, not a list of syntax trivia. You will run scripts, read errors, and build a tiny command-line helper.",
+      "learningObjectives": [
+        "Run Python scripts and read tracebacks",
+        "Use variables, collections, and functions",
+        "Handle files and simple errors",
+        "Explain what a program is doing in plain language"
+      ],
+      "prerequisites": [
+        "No prior programming course is required"
+      ],
+      "targetAudience": [
+        "First-year engineering students",
+        "Anyone starting a technical learning path"
+      ],
+      "tags": [
+        "python",
+        "programming",
+        "beginner"
+      ],
+      "skills": [
+        "Python",
+        "problem solving"
+      ],
+      "language": "English",
+      "status": "PUBLISHED",
+      "rejectionReason": null,
+      "sections": [
+        {
+          "title": "Getting Python running",
+          "description": "Install the language and understand how a script starts.",
+          "lessons": [
+            {
+              "title": "What Python is used for",
+              "description": "See where Python shows up in automation, data work, and web services.",
+              "minutes": 11,
+              "access": "FREE_PREVIEW",
+              "resources": [
+                {
+                  "title": "Python documentation",
+                  "url": "https://docs.python.org/3/",
+                  "type": "LINK"
+                }
+              ],
+              "sampleVideo": true
+            },
+            {
+              "title": "Install Python and use the REPL",
+              "description": "Install a current Python and try expressions before writing a file.",
+              "minutes": 14,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Write and run your first script",
+              "description": "Create a file, run it from the terminal, and read the first error.",
+              "minutes": 16,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Data you can name",
+          "description": "Variables, text, numbers, and the collections you will use every week.",
+          "lessons": [
+            {
+              "title": "Names, numbers, and strings",
+              "description": "Bind values to names and format a readable message.",
+              "minutes": 13,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Lists and dictionaries",
+              "description": "Store a sequence and a small record, then look values up.",
+              "minutes": 15,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Conditions and loops",
+              "description": "Repeat work and choose a path without copying code.",
+              "minutes": 14,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Functions and small programs",
+          "description": "Break a script into pieces you can test.",
+          "lessons": [
+            {
+              "title": "Write a function with a clear job",
+              "description": "Pass arguments, return a value, and name the function for what it does.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Read a text file safely",
+              "description": "Open a file, handle a missing path, and close the resource.",
+              "minutes": 13,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Build a tiny grade calculator",
+              "description": "Combine input, a function, and formatted output in one script.",
+              "minutes": 18,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "java-programming",
+      "title": "Java Programming",
+      "domain": "TECHNICAL",
+      "category": "java",
+      "difficulty": "BEGINNER",
+      "instructor": "meera",
+      "shortDescription": "Learn Java types, classes, and a small console program.",
+      "description": "This course builds the Java habits you need before Spring Boot: types, classes, collections, and a program that can be compiled and run on purpose.",
+      "learningObjectives": [
+        "Compile and run a Java program",
+        "Model a small concept with a class",
+        "Use lists and maps",
+        "Read a stack trace without guessing"
+      ],
+      "prerequisites": [
+        "Comfort with variables and functions in any language helps, but is not required"
+      ],
+      "targetAudience": [
+        "Students moving from Python or C to Java",
+        "Future Spring Boot learners"
+      ],
+      "tags": [
+        "java",
+        "oop",
+        "beginner"
+      ],
+      "skills": [
+        "Java",
+        "object-oriented programming"
+      ],
+      "language": "English",
+      "status": "PUBLISHED",
+      "rejectionReason": null,
+      "sections": [
+        {
+          "title": "A Java program that runs",
+          "description": "From JDK to a class with a main method.",
+          "lessons": [
+            {
+              "title": "Why Java still matters for backend work",
+              "description": "Connect the language to services, Android, and this platform's own backend.",
+              "minutes": 10,
+              "access": "FREE_PREVIEW",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Install a JDK and compile Hello",
+              "description": "Use javac and java, and notice the class file you produced.",
+              "minutes": 14,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Read a compiler error line by line",
+              "description": "Fix a missing semicolon, a wrong type, and an unknown symbol.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Types and objects",
+          "description": "The difference between a value and an object that owns behavior.",
+          "lessons": [
+            {
+              "title": "Primitives, strings, and wrappers",
+              "description": "Choose a type and stop treating every value as text.",
+              "minutes": 13,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A class for a course lesson",
+              "description": "Fields, a constructor, and a method that describes the lesson.",
+              "minutes": 16,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Lists of lessons",
+              "description": "Store objects in an ArrayList and iterate with a for-each loop.",
+              "minutes": 14,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Decisions in code",
+          "description": "Branches, exceptions, and a small finished program.",
+          "lessons": [
+            {
+              "title": "if, switch, and enums",
+              "description": "Represent lesson access as an enum instead of a magic string.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Checked thinking about exceptions",
+              "description": "Catch a specific failure and leave a useful message.",
+              "minutes": 13,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A console course printer",
+              "description": "Load a few hard-coded lessons and print a readable outline.",
+              "minutes": 17,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "java-and-spring-boot",
+      "title": "Java and Spring Boot",
+      "domain": "TECHNICAL",
+      "category": "java",
+      "difficulty": "INTERMEDIATE",
+      "instructor": "meera",
+      "shortDescription": "Build a small REST API with Spring Boot and clear layers.",
+      "description": "You will create a Spring Boot service with a controller, a service, and a repository. The point is to see where rules live, not to memorize annotations.",
+      "learningObjectives": [
+        "Start a Spring Boot application",
+        "Expose a REST endpoint with validation",
+        "Separate controller and service code",
+        "Explain what happens on one HTTP request"
+      ],
+      "prerequisites": [
+        "Basic Java classes and collections",
+        "Willingness to read a stack trace"
+      ],
+      "targetAudience": [
+        "Students who finished an introductory Java course",
+        "Teams preparing an academic backend project"
+      ],
+      "tags": [
+        "java",
+        "spring-boot",
+        "rest",
+        "backend"
+      ],
+      "skills": [
+        "Spring Boot",
+        "REST APIs",
+        "Java"
+      ],
+      "language": "English",
+      "status": "PUBLISHED",
+      "rejectionReason": null,
+      "sections": [
+        {
+          "title": "The request path",
+          "description": "What Spring Boot starts, and where your code sits.",
+          "lessons": [
+            {
+              "title": "What Spring Boot configures for you",
+              "description": "See the embedded server, dependency injection, and why we do not write a socket loop.",
+              "minutes": 12,
+              "access": "FREE_PREVIEW",
+              "resources": [
+                {
+                  "title": "Spring Boot reference",
+                  "url": "https://docs.spring.io/spring-boot/reference/",
+                  "type": "LINK"
+                }
+              ],
+              "sampleVideo": true
+            },
+            {
+              "title": "A controller that returns JSON",
+              "description": "Map a GET request to a small response object.",
+              "minutes": 14,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Run and hit the endpoint",
+              "description": "Start the app and call it with curl or Swagger.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Rules live in the service",
+          "description": "Keep controllers thin.",
+          "lessons": [
+            {
+              "title": "Validate the request body",
+              "description": "Reject a blank title before it reaches the database.",
+              "minutes": 13,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A service method with one job",
+              "description": "Create a course draft and return a view, not the database entity.",
+              "minutes": 15,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Turn failures into clear errors",
+              "description": "Use one error shape so the frontend can show a message.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Persistence without mixing layers",
+          "description": "A first look at saving data.",
+          "lessons": [
+            {
+              "title": "A document and a repository",
+              "description": "Map a Java class to a MongoDB collection.",
+              "minutes": 14,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Unique email and duplicate keys",
+              "description": "Let the database reject a duplicate, then translate that into a 409.",
+              "minutes": 13,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Walk one create-course request",
+              "description": "From JSON body to saved document and response.",
+              "minutes": 16,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "c-and-cpp",
+      "title": "C and C++",
+      "domain": "TECHNICAL",
+      "category": "cpp",
+      "difficulty": "INTERMEDIATE",
+      "instructor": "meera",
+      "shortDescription": "Understand memory, pointers, and a safer C++ habit.",
+      "description": "A practical bridge from C's explicit memory to modern C++. You will write small programs and learn which bugs come from ownership, not from syntax.",
+      "learningObjectives": [
+        "Compile C and C++ programs",
+        "Explain pointers and references",
+        "Use vectors instead of raw arrays when you can",
+        "Recognize a leak and a dangling pointer"
+      ],
+      "prerequisites": [
+        "Any introductory programming course"
+      ],
+      "targetAudience": [
+        "Students heading toward systems, games, or performance work"
+      ],
+      "tags": [
+        "c",
+        "cpp",
+        "memory"
+      ],
+      "skills": [
+        "C",
+        "C++",
+        "memory management"
+      ],
+      "language": "English",
+      "status": "PUBLISHED",
+      "rejectionReason": null,
+      "sections": [
+        {
+          "title": "C, close to the machine",
+          "description": "Compilation, types, and arrays.",
+          "lessons": [
+            {
+              "title": "Compile a C program and read the warnings",
+              "description": "Treat warnings as part of the assignment, not decoration.",
+              "minutes": 12,
+              "access": "FREE_PREVIEW",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Arrays, strings, and off-by-one errors",
+              "description": "Walk an index and see how a string actually ends.",
+              "minutes": 14,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Pointers without the mythology",
+              "description": "A pointer is an address. Draw it before you dereference it.",
+              "minutes": 16,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Ownership starts to matter",
+          "description": "malloc, free, and the bugs between them.",
+          "lessons": [
+            {
+              "title": "Allocate and free a buffer",
+              "description": "Pair every allocation with a free on every return path.",
+              "minutes": 13,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Stack versus heap",
+              "description": "Know which values disappear when a function returns.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A small student-record program in C",
+              "description": "Store names and scores, then free the list.",
+              "minutes": 18,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "C++ with fewer foot-guns",
+          "description": "RAII and the standard library.",
+          "lessons": [
+            {
+              "title": "References and const",
+              "description": "Pass a value without copying it and without inviting a change.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "std::vector and std::string",
+              "description": "Let the library own the memory for ordinary data.",
+              "minutes": 14,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A class that closes its file",
+              "description": "Use a destructor so the resource does not depend on memory.",
+              "minutes": 15,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "data-structures-and-algorithms",
+      "title": "Data Structures and Algorithms",
+      "domain": "TECHNICAL",
+      "category": "dsa",
+      "difficulty": "INTERMEDIATE",
+      "instructor": "meera",
+      "shortDescription": "Choose a data structure for the question you actually have.",
+      "description": "Arrays, lists, trees, graphs, and the cost of using them. Examples come from course catalogs, enrollments, and search, so the structures stay tied to this project.",
+      "learningObjectives": [
+        "State time and space cost in plain language",
+        "Use a map, a heap, and a graph for a fitting problem",
+        "Trace binary search and BFS by hand",
+        "Stop picking a structure only because it is familiar"
+      ],
+      "prerequisites": [
+        "Loops, functions, and arrays in one language"
+      ],
+      "targetAudience": [
+        "Students preparing for labs, interviews, and backend work"
+      ],
+      "tags": [
+        "dsa",
+        "algorithms",
+        "complexity"
+      ],
+      "skills": [
+        "data structures",
+        "algorithms",
+        "complexity"
+      ],
+      "language": "English",
+      "status": "PUBLISHED",
+      "rejectionReason": null,
+      "sections": [
+        {
+          "title": "Cost before cleverness",
+          "description": "Big-O as a comparison tool.",
+          "lessons": [
+            {
+              "title": "Counting steps on a course list",
+              "description": "Compare a linear scan with a lookup by id.",
+              "minutes": 12,
+              "access": "FREE_PREVIEW",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Arrays and linked structures",
+              "description": "Know what is cheap: index access, or insert in the middle.",
+              "minutes": 14,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Stacks and queues in real flows",
+              "description": "Undo a curriculum edit, and process a moderation queue.",
+              "minutes": 13,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Search and sort",
+          "description": "The algorithms you will be asked to trace.",
+          "lessons": [
+            {
+              "title": "Binary search on a sorted catalog",
+              "description": "Keep the invariant clear: the answer is still inside this range.",
+              "minutes": 13,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Merge sort and why stability matters",
+              "description": "Sort courses by rating without scrambling equal titles.",
+              "minutes": 15,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Hash maps and collisions",
+              "description": "See why a unique email index feels instant.",
+              "minutes": 14,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Trees and graphs",
+          "description": "Hierarchical curriculum and prerequisite links.",
+          "lessons": [
+            {
+              "title": "A course outline as a tree",
+              "description": "Sections contain lessons. Draw the parent links.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Heaps and a top-k recommendation list",
+              "description": "Keep the best few scores without sorting everything.",
+              "minutes": 14,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Prerequisites as a graph",
+              "description": "Detect a cycle before you promise a learning order.",
+              "minutes": 16,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "web-development",
+      "title": "Web Development",
+      "domain": "TECHNICAL",
+      "category": "web",
+      "difficulty": "BEGINNER",
+      "instructor": "meera",
+      "shortDescription": "Build a small web page that talks to an API.",
+      "description": "HTML, CSS, and JavaScript with one goal: a page that loads course cards from JSON and still makes sense without decoration.",
+      "learningObjectives": [
+        "Structure a page with semantic HTML",
+        "Style a card layout",
+        "Fetch JSON and render it",
+        "Handle a failed request visibly"
+      ],
+      "prerequisites": [
+        "No web framework is required"
+      ],
+      "targetAudience": [
+        "Students who will later learn React or another frontend"
+      ],
+      "tags": [
+        "html",
+        "css",
+        "javascript",
+        "web"
+      ],
+      "skills": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "language": "English",
+      "status": "PUBLISHED",
+      "rejectionReason": null,
+      "sections": [
+        {
+          "title": "A page with a job",
+          "description": "Structure before color.",
+          "lessons": [
+            {
+              "title": "Semantic HTML for a course card",
+              "description": "Use headings, lists, and buttons for what they are.",
+              "minutes": 11,
+              "access": "FREE_PREVIEW",
+              "resources": [
+                {
+                  "title": "MDN HTML",
+                  "url": "https://developer.mozilla.org/en-US/docs/Web/HTML",
+                  "type": "LINK"
+                }
+              ],
+              "sampleVideo": false
+            },
+            {
+              "title": "CSS layout without a framework",
+              "description": "Flex and grid, spacing, and a readable line length.",
+              "minutes": 14,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Forms that can be submitted",
+              "description": "Labels, required fields, and an error message next to the field.",
+              "minutes": 13,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "JavaScript in the browser",
+          "description": "DOM updates and events.",
+          "lessons": [
+            {
+              "title": "Select, listen, and update",
+              "description": "A search box filters cards you already have.",
+              "minutes": 13,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Fetch a course list",
+              "description": "Call a JSON endpoint and render titles.",
+              "minutes": 15,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Show loading and failure",
+              "description": "Do not leave a blank page when the API is down.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "A tiny catalog",
+          "description": "Put the pieces together.",
+          "lessons": [
+            {
+              "title": "Accessible contrast and focus",
+              "description": "A keyboard user can see where they are.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Responsive cards",
+              "description": "One column on a phone, three on a desk.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Review the page as a user",
+              "description": "Find one confusing label and fix the words, not only the color.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "full-stack-development",
+      "title": "Full-Stack Development",
+      "domain": "TECHNICAL",
+      "category": "web",
+      "difficulty": "INTERMEDIATE",
+      "instructor": "meera",
+      "shortDescription": "Connect a React screen to a real Spring Boot API.",
+      "description": "This course follows one feature, course enrollment, from the button in the browser to the document in MongoDB and back.",
+      "learningObjectives": [
+        "Trace one user action across frontend and backend",
+        "Keep secrets on the server",
+        "Design a response the UI can render",
+        "Name the failure when a layer is down"
+      ],
+      "prerequisites": [
+        "Introductory web development",
+        "Basic Java or a willingness to read Java examples"
+      ],
+      "targetAudience": [
+        "Students building an academic full-stack project"
+      ],
+      "tags": [
+        "full-stack",
+        "react",
+        "spring-boot",
+        "api"
+      ],
+      "skills": [
+        "full-stack development",
+        "API design"
+      ],
+      "language": "English",
+      "status": "PUBLISHED",
+      "rejectionReason": null,
+      "sections": [
+        {
+          "title": "One feature, three layers",
+          "description": "UI, API, and database.",
+          "lessons": [
+            {
+              "title": "Draw the enrollment path",
+              "description": "Button, request, service, document, response.",
+              "minutes": 12,
+              "access": "FREE_PREVIEW",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A typed frontend model",
+              "description": "Match the JSON field names on purpose.",
+              "minutes": 13,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A backend rule the UI cannot skip",
+              "description": "The server checks publication status even if the button is hidden.",
+              "minutes": 14,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Contracts and failures",
+          "description": "What the two sides promise each other.",
+          "lessons": [
+            {
+              "title": "One error shape",
+              "description": "Code, message, and field details.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Pagination for a catalog",
+              "description": "Page, size, and total, not an unbounded list.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Docker networking in plain language",
+              "description": "The browser uses localhost. The backend container uses the service name mongo.",
+              "minutes": 13,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Finish the loop",
+          "description": "A feature you can demonstrate.",
+          "lessons": [
+            {
+              "title": "Save, refresh, and still be enrolled",
+              "description": "Persistence is the demo, not a toast message.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Logs that help you debug",
+              "description": "What to log, and what you must never log.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A five-minute demo script",
+              "description": "Show the document in MongoDB after the click.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "react-and-typescript",
+      "title": "React and TypeScript",
+      "domain": "TECHNICAL",
+      "category": "web",
+      "difficulty": "INTERMEDIATE",
+      "instructor": "meera",
+      "shortDescription": "Build typed React screens that call a real API.",
+      "description": "Components, state, routes, and forms in TypeScript. Examples match a learning platform: course cards, a player, and a protected page.",
+      "learningObjectives": [
+        "Type a component's props and API data",
+        "Share layout without copying markup",
+        "Protect a route in the UI and still trust the server",
+        "Keep a form's error next to the field"
+      ],
+      "prerequisites": [
+        "HTML, CSS, and basic JavaScript"
+      ],
+      "targetAudience": [
+        "Students building the Lumina frontend or a similar app"
+      ],
+      "tags": [
+        "react",
+        "typescript",
+        "frontend"
+      ],
+      "skills": [
+        "React",
+        "TypeScript"
+      ],
+      "language": "English",
+      "status": "PUBLISHED",
+      "rejectionReason": null,
+      "sections": [
+        {
+          "title": "Components with types",
+          "description": "Props, state, and a card.",
+          "lessons": [
+            {
+              "title": "A course card component",
+              "description": "Pass a typed course, not a bag of any.",
+              "minutes": 12,
+              "access": "FREE_PREVIEW",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "State for search text",
+              "description": "Control an input and filter a list.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Effects and loading",
+              "description": "Fetch on mount and avoid setting state after unmount.",
+              "minutes": 14,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Routes and layouts",
+          "description": "Public pages and role pages.",
+          "lessons": [
+            {
+              "title": "A shared public layout",
+              "description": "Navigation, outlet, and footer.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A route that requires a student",
+              "description": "Redirect to login, but remember the server is the real gate.",
+              "minutes": 13,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "URL params for a lesson",
+              "description": "Read course id and lesson id from the path.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Forms that tell the truth",
+          "description": "Validation and uploads.",
+          "lessons": [
+            {
+              "title": "Client checks before submit",
+              "description": "Required title, then still handle the server error.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Upload a file with FormData",
+              "description": "Do not set a JSON content type on a multipart body.",
+              "minutes": 13,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A player component",
+              "description": "A video element, a placeholder, and previous/next.",
+              "minutes": 15,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "artificial-intelligence",
+      "title": "Artificial Intelligence",
+      "domain": "TECHNICAL",
+      "category": "ai",
+      "difficulty": "BEGINNER",
+      "instructor": "arjun",
+      "shortDescription": "See what AI systems do before you call a model magical.",
+      "description": "Search, representation, and the difference between a rule, a learned model, and a generated answer. Written for engineers who need to explain AI honestly.",
+      "learningObjectives": [
+        "Separate rules, models, and generation",
+        "Describe a search problem",
+        "Name a limitation of a chatbot answer",
+        "Explain an AI feature without overclaiming"
+      ],
+      "prerequisites": [
+        "Introductory programming helps"
+      ],
+      "targetAudience": [
+        "Students adding AI to a project",
+        "Anyone who must present an AI feature in a viva"
+      ],
+      "tags": [
+        "ai",
+        "search",
+        "reasoning"
+      ],
+      "skills": [
+        "artificial intelligence",
+        "problem formulation"
+      ],
+      "language": "English",
+      "status": "PUBLISHED",
+      "rejectionReason": null,
+      "sections": [
+        {
+          "title": "What the word AI is hiding",
+          "description": "Names, claims, and useful distinctions.",
+          "lessons": [
+            {
+              "title": "Rules, models, and generators",
+              "description": "A recommendation score is not the same thing as a trained ranker.",
+              "minutes": 12,
+              "access": "FREE_PREVIEW",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Formulate a problem",
+              "description": "State, actions, and a goal, using a learning roadmap as the example.",
+              "minutes": 13,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Search on a small graph",
+              "description": "BFS finds a path through prerequisite concepts.",
+              "minutes": 14,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Knowledge and uncertainty",
+          "description": "What a system can and cannot know.",
+          "lessons": [
+            {
+              "title": "Facts versus inferences",
+              "description": "A quiz score is a fact. A learning gap is an inference.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Why a model can be confidently wrong",
+              "description": "Look at a bad explanation and mark what was unsupported.",
+              "minutes": 13,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Human review is a feature",
+              "description": "Moderation that auto-deletes on a guess is a bug.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "AI inside a product",
+          "description": "How Lumina uses these ideas.",
+          "lessons": [
+            {
+              "title": "Ground an answer in lesson text",
+              "description": "Retrieval from your database is not the same as watching the video.",
+              "minutes": 13,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Cache an explanation",
+              "description": "A free API quota is a design constraint.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Write the limitation out loud",
+              "description": "The sentence you should say in a project evaluation.",
+              "minutes": 9,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "machine-learning",
+      "title": "Machine Learning",
+      "domain": "TECHNICAL",
+      "category": "ml",
+      "difficulty": "INTERMEDIATE",
+      "instructor": "arjun",
+      "shortDescription": "Train a simple model and know what the number means.",
+      "description": "Supervised learning with a small dataset, a train/test split, and a careful reading of accuracy. No claim that a demo model is production ML.",
+      "learningObjectives": [
+        "Split data before you score a model",
+        "Explain overfitting with an example",
+        "Compare accuracy with a baseline",
+        "Say what data the model never saw"
+      ],
+      "prerequisites": [
+        "Basic Python",
+        "Comfort with averages and percentages"
+      ],
+      "targetAudience": [
+        "Students who want an honest introduction to ML"
+      ],
+      "tags": [
+        "machine-learning",
+        "python",
+        "evaluation"
+      ],
+      "skills": [
+        "machine learning",
+        "model evaluation"
+      ],
+      "language": "English",
+      "status": "PUBLISHED",
+      "rejectionReason": null,
+      "sections": [
+        {
+          "title": "Examples, not magic",
+          "description": "Data, labels, and a baseline.",
+          "lessons": [
+            {
+              "title": "A labeled table of study habits",
+              "description": "Rows, features, and the thing you are trying to predict.",
+              "minutes": 12,
+              "access": "FREE_PREVIEW",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A baseline you must beat",
+              "description": "Predict the most common class and write that number down first.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Train and test are different piles",
+              "description": "Why scoring on the training rows flatters you.",
+              "minutes": 13,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "A first model",
+          "description": "Linear and tree-shaped intuition.",
+          "lessons": [
+            {
+              "title": "A linear decision in one picture",
+              "description": "One feature, a threshold, and the mistakes on each side.",
+              "minutes": 13,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Overfitting a tiny dataset",
+              "description": "A model that memorizes six students and fails on the seventh.",
+              "minutes": 14,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Features you should not use",
+              "description": "Do not feed a password, a token, or a student id as a clever feature.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Reporting the result",
+          "description": "Numbers with a sentence attached.",
+          "lessons": [
+            {
+              "title": "Accuracy is not the whole story",
+              "description": "A model that never predicts the rare class can still look fine.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "What this course does not prove",
+              "description": "A classroom model is not a deployed recommender.",
+              "minutes": 9,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "How Lumina's recommendations differ",
+              "description": "They are scored rules plus an optional written explanation.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "generative-ai-and-llms",
+      "title": "Generative AI and Large Language Models",
+      "domain": "TECHNICAL",
+      "category": "genai",
+      "difficulty": "INTERMEDIATE",
+      "instructor": "arjun",
+      "shortDescription": "Use a language model with limits, context, and a straight answer.",
+      "description": "Prompts, context windows, structured output, quotas, and the difference between grounded help and a fluent guess. This is the course that matches Lumina's AI design.",
+      "learningObjectives": [
+        "Write a prompt that states the allowed sources",
+        "Ask for JSON you can validate",
+        "Handle a quota error without breaking the app",
+        "Refuse to claim the model watched a video"
+      ],
+      "prerequisites": [
+        "Basic web or backend experience"
+      ],
+      "targetAudience": [
+        "Students integrating the Gemini API",
+        "Anyone presenting an LLM feature"
+      ],
+      "tags": [
+        "llm",
+        "gemini",
+        "prompting",
+        "rag"
+      ],
+      "skills": [
+        "generative AI",
+        "prompt design"
+      ],
+      "language": "English",
+      "status": "PUBLISHED",
+      "rejectionReason": null,
+      "sections": [
+        {
+          "title": "What the model is doing",
+          "description": "Tokens, context, and fluent guesses.",
+          "lessons": [
+            {
+              "title": "A model completes text",
+              "description": "It is not a database and it did not attend your lecture.",
+              "minutes": 12,
+              "access": "FREE_PREVIEW",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Context you choose to send",
+              "description": "Lesson text in, passwords and tokens out.",
+              "minutes": 13,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Temperature and structured output",
+              "description": "A quiz needs a shape, not a paragraph you hope to parse.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Grounding and failure",
+          "description": "Retrieval, quotas, and bad answers.",
+          "lessons": [
+            {
+              "title": "Retrieve lesson notes before you ask",
+              "description": "A small, relevant context beats a long vague prompt.",
+              "minutes": 14,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "When the API returns 429",
+              "description": "Show a message and keep the rest of the product working.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Label generated text",
+              "description": "Students should see which sentence came from the instructor.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "A responsible feature",
+          "description": "Design choices you can defend.",
+          "lessons": [
+            {
+              "title": "Do not auto-delete on a model guess",
+              "description": "Moderation assistance is a flag, not a verdict.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Retention for prompts",
+              "description": "Keep a purpose and an expiry, or do not store the text.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A demo that survives a dead API key",
+              "description": "The fallback sentence is part of the feature.",
+              "minutes": 9,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "data-science",
+      "title": "Data Science",
+      "domain": "TECHNICAL",
+      "category": "data-science",
+      "difficulty": "BEGINNER",
+      "instructor": "arjun",
+      "shortDescription": "Ask a question, then touch the data.",
+      "description": "A practical introduction: question, table, summary, chart, and a sentence you are willing to defend. Uses learning-platform examples instead of a random iris dataset only.",
+      "learningObjectives": [
+        "Turn a vague question into a measurable one",
+        "Summarize a table without hiding the sample size",
+        "Choose a chart that matches the question",
+        "Separate description from a causal claim"
+      ],
+      "prerequisites": [
+        "Secondary-school mathematics"
+      ],
+      "targetAudience": [
+        "Students who want evidence, not only dashboards"
+      ],
+      "tags": [
+        "data-science",
+        "analysis",
+        "visualization"
+      ],
+      "skills": [
+        "data analysis",
+        "question design"
+      ],
+      "language": "English",
+      "status": "PUBLISHED",
+      "rejectionReason": null,
+      "sections": [
+        {
+          "title": "Questions first",
+          "description": "What would change your mind?",
+          "lessons": [
+            {
+              "title": "A bad dashboard question",
+              "description": "Total users is a count, not an insight.",
+              "minutes": 10,
+              "access": "FREE_PREVIEW",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Define the row",
+              "description": "One row per enrollment, not one row per feeling.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Missing videos are missing data",
+              "description": "Do not treat an unuploaded lesson as a watched lesson.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Summaries that stay honest",
+          "description": "Counts, rates, and groups.",
+          "lessons": [
+            {
+              "title": "Completion rate with a denominator",
+              "description": "Completed lessons divided by lessons that can be completed.",
+              "minutes": 13,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Group by course, then sort",
+              "description": "The aggregation idea behind the admin dashboard.",
+              "minutes": 14,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A small chart with a title that claims less",
+              "description": "Name the sample: seeded demo data, or live students.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "From table to sentence",
+          "description": "Write the finding.",
+          "lessons": [
+            {
+              "title": "Description is not a cause",
+              "description": "Students who watch more also complete more. That is not yet a reason.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Check one outlier",
+              "description": "A 100 percent jump in one request is a data bug until proven otherwise.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Hand the number to a teacher",
+              "description": "What an instructor can do with a real progress report.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "database-management-systems",
+      "title": "Database Management Systems",
+      "domain": "TECHNICAL",
+      "category": "databases",
+      "difficulty": "INTERMEDIATE",
+      "instructor": "meera",
+      "shortDescription": "Model data for the questions your application asks.",
+      "description": "The ADBMS course behind this project: documents, references, indexes, aggregation, and consistency. Examples are Lumina's own collections.",
+      "learningObjectives": [
+        "Choose embedding or a reference with a reason",
+        "Design an index for a real query",
+        "Read a simple aggregation pipeline",
+        "Explain a consistency choice in one minute"
+      ],
+      "prerequisites": [
+        "Introductory programming",
+        "A first look at tables or JSON helps"
+      ],
+      "targetAudience": [
+        "ADBMS students",
+        "Anyone defending a MongoDB schema in a viva"
+      ],
+      "tags": [
+        "mongodb",
+        "adbms",
+        "modeling",
+        "indexes"
+      ],
+      "skills": [
+        "data modeling",
+        "MongoDB",
+        "indexing"
+      ],
+      "language": "English",
+      "status": "PUBLISHED",
+      "rejectionReason": null,
+      "sections": [
+        {
+          "title": "Documents and relationships",
+          "description": "Not every table should become a collection.",
+          "lessons": [
+            {
+              "title": "A course outline wants to be one document",
+              "description": "You always read sections with the course. Embedding fits.",
+              "minutes": 13,
+              "access": "FREE_PREVIEW",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Progress wants its own collection",
+              "description": "Playback updates must not rewrite the course.",
+              "minutes": 13,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Enrollment is a many-to-many link",
+              "description": "A separate document with a unique pair of ids.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Integrity without foreign keys",
+          "description": "What MongoDB will and will not do for you.",
+          "lessons": [
+            {
+              "title": "Unique indexes as rules",
+              "description": "One email, one enrollment pair.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Schema validation",
+              "description": "The database can reject a broken role even if the app has a bug.",
+              "minutes": 13,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Soft delete and history",
+              "description": "Archive a course without erasing the fact that a student finished it.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Queries you can explain",
+          "description": "Indexes, aggregation, and transactions.",
+          "lessons": [
+            {
+              "title": "An index for the catalog filter",
+              "description": "Status, domain, category, and difficulty.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Group enrollments for a dashboard",
+              "description": "$match, $group, and $sort on real collections.",
+              "minutes": 14,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A transaction needs a replica set",
+              "description": "Why this project's MongoDB container is not a standalone node.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "mongodb",
+      "title": "MongoDB",
+      "domain": "TECHNICAL",
+      "category": "databases",
+      "difficulty": "BEGINNER",
+      "instructor": "meera",
+      "shortDescription": "Query, index, and update MongoDB documents safely.",
+      "description": "Hands-on MongoDB for this project: find, update, indexes, and aggregation. You will use the same collection names Lumina uses.",
+      "learningObjectives": [
+        "Write a find query with a filter",
+        "Update one field without replacing the document",
+        "Create a unique compound index",
+        "Run a small aggregation"
+      ],
+      "prerequisites": [
+        "Comfort reading JSON"
+      ],
+      "targetAudience": [
+        "Students using MongoDB in a Spring Boot project"
+      ],
+      "tags": [
+        "mongodb",
+        "queries",
+        "aggregation"
+      ],
+      "skills": [
+        "MongoDB",
+        "aggregation"
+      ],
+      "language": "English",
+      "status": "PUBLISHED",
+      "rejectionReason": null,
+      "sections": [
+        {
+          "title": "Documents in practice",
+          "description": "Read and write.",
+          "lessons": [
+            {
+              "title": "A course document, field by field",
+              "description": "Walk a real example from this platform.",
+              "minutes": 12,
+              "access": "FREE_PREVIEW",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Find published courses",
+              "description": "A filter on status, then a projection that hides extra fields.",
+              "minutes": 13,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Update a lesson title",
+              "description": "Change one nested field. Do not replace the whole course by accident.",
+              "minutes": 14,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Indexes",
+          "description": "Make the common query cheap, and the duplicate impossible.",
+          "lessons": [
+            {
+              "title": "Explain a catalog query",
+              "description": "See whether the filter used an index.",
+              "minutes": 13,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Unique on student and course",
+              "description": "The second enrollment must fail in the database.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A text index is not a search engine",
+              "description": "Know what it is good at, and when a simple regex is enough for a demo.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Aggregation for reports",
+          "description": "Dashboard numbers from documents.",
+          "lessons": [
+            {
+              "title": "$match and $group",
+              "description": "Count courses by status.",
+              "minutes": 13,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "$lookup when you truly need it",
+              "description": "Join a user name onto an audit log for the admin screen.",
+              "minutes": 14,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Do not store the video in the document",
+              "description": "Metadata in MongoDB, bytes on a volume.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "sql-and-database-design",
+      "title": "SQL and Database Design",
+      "domain": "TECHNICAL",
+      "category": "databases",
+      "difficulty": "BEGINNER",
+      "instructor": "meera",
+      "shortDescription": "Design tables, then see why this project did not copy them blindly.",
+      "description": "Relational modeling, keys, and SQL queries, used as a comparison point for Lumina's document model. You should be able to defend both.",
+      "learningObjectives": [
+        "Identify entities and relationships",
+        "Write a SELECT with a join and a group",
+        "Normalize a small schema and know when to stop",
+        "Translate one relational idea into a MongoDB choice"
+      ],
+      "prerequisites": [
+        "No database course is required"
+      ],
+      "targetAudience": [
+        "ADBMS students who will be asked why not MySQL"
+      ],
+      "tags": [
+        "sql",
+        "normalization",
+        "design"
+      ],
+      "skills": [
+        "SQL",
+        "database design"
+      ],
+      "language": "English",
+      "status": "PUBLISHED",
+      "rejectionReason": null,
+      "sections": [
+        {
+          "title": "Tables and keys",
+          "description": "The relational starting point.",
+          "lessons": [
+            {
+              "title": "Users, courses, and enrollments as tables",
+              "description": "Draw the keys before writing SQL.",
+              "minutes": 12,
+              "access": "FREE_PREVIEW",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A join that builds a catalog row",
+              "description": "Course plus instructor name.",
+              "minutes": 13,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A unique constraint",
+              "description": "The relational cousin of MongoDB's unique index.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Normalization and its cost",
+          "description": "When splitting tables helps, and when it only adds joins.",
+          "lessons": [
+            {
+              "title": "A lesson table versus an embedded outline",
+              "description": "Both can be correct. The access pattern decides.",
+              "minutes": 14,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Update anomalies",
+              "description": "A duplicated instructor name can go stale. Say so.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Transactions in both worlds",
+              "description": "More than one write that must succeed together.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Queries you should be able to read",
+          "description": "SELECT as a thinking tool.",
+          "lessons": [
+            {
+              "title": "Filter, group, and sort",
+              "description": "Completion counts by course.",
+              "minutes": 13,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Why Lumina still uses MongoDB",
+              "description": "The curriculum tree and the project requirement, stated plainly.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "What SQL skills you still need",
+              "description": "Reading a report query will not go out of date.",
+              "minutes": 9,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "cloud-computing",
+      "title": "Cloud Computing",
+      "domain": "TECHNICAL",
+      "category": "cloud",
+      "difficulty": "BEGINNER",
+      "instructor": "arjun",
+      "shortDescription": "Understand compute, storage, and why a video file is not a database row.",
+      "description": "A ground-level cloud course: regions, storage, and the path from a laptop Docker volume to object storage later.",
+      "learningObjectives": [
+        "Name compute, storage, and network as separate concerns",
+        "Explain object storage versus a database",
+        "Read a simple environment-based configuration",
+        "Describe a backup in one paragraph"
+      ],
+      "prerequisites": [
+        "Basic computing vocabulary"
+      ],
+      "targetAudience": [
+        "Students deploying a Docker project and explaining the next step"
+      ],
+      "tags": [
+        "cloud",
+        "storage",
+        "architecture"
+      ],
+      "skills": [
+        "cloud computing",
+        "object storage"
+      ],
+      "language": "English",
+      "status": "PUBLISHED",
+      "rejectionReason": null,
+      "sections": [
+        {
+          "title": "The three pieces",
+          "description": "Compute, storage, and network.",
+          "lessons": [
+            {
+              "title": "A container is not the cloud",
+              "description": "Docker on a laptop is the rehearsal.",
+              "minutes": 11,
+              "access": "FREE_PREVIEW",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Where a video should live",
+              "description": "Object storage later, a volume now, never a 16 MB document.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Configuration from the environment",
+              "description": "Keys and passwords stay out of Git.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Availability in plain words",
+          "description": "What breaks, and what you can say about it.",
+          "lessons": [
+            {
+              "title": "A single container can fail",
+              "description": "Restart policies are not a second data center.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Persistent volumes",
+              "description": "MongoDB data survives a container restart. Know which volume does that.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Backups you could actually run",
+              "description": "mongodump and a copy of the media volume.",
+              "minutes": 13,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "A path to a real deployment",
+          "description": "What this project deliberately did not build.",
+          "lessons": [
+            {
+              "title": "Replace the storage adapter",
+              "description": "Same metadata, different place for the bytes.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "HTTPS and a real secret",
+              "description": "The local JWT default is not a production secret.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Cost as a design input",
+              "description": "A free model tier is a quota, not an unlimited promise.",
+              "minutes": 9,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "devops-and-docker",
+      "title": "DevOps and Docker",
+      "domain": "TECHNICAL",
+      "category": "devops",
+      "difficulty": "BEGINNER",
+      "instructor": "arjun",
+      "shortDescription": "Run Lumina with Docker Compose and know which URL is which.",
+      "description": "Images, containers, volumes, health checks, and the hostname trap. Built around this repository's compose file.",
+      "learningObjectives": [
+        "Read a compose file",
+        "Explain a volume",
+        "Tell a browser URL from a container hostname",
+        "Use a health check before the backend starts"
+      ],
+      "prerequisites": [
+        "Ability to use a terminal"
+      ],
+      "targetAudience": [
+        "Students demonstrating this project on a lab machine"
+      ],
+      "tags": [
+        "docker",
+        "compose",
+        "devops"
+      ],
+      "skills": [
+        "Docker",
+        "Docker Compose"
+      ],
+      "language": "English",
+      "status": "PUBLISHED",
+      "rejectionReason": null,
+      "sections": [
+        {
+          "title": "Images and containers",
+          "description": "A recipe and a running process.",
+          "lessons": [
+            {
+              "title": "What the Dockerfiles in this repo do",
+              "description": "Build the jar, build the frontend, serve it with nginx.",
+              "minutes": 12,
+              "access": "FREE_PREVIEW",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Compose starts three services",
+              "description": "mongo, backend, and frontend on one network.",
+              "minutes": 13,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "localhost is not mongo",
+              "description": "The mistake that makes a backend look unable to connect.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "State and startup order",
+          "description": "Volumes and health.",
+          "lessons": [
+            {
+              "title": "The MongoDB volume",
+              "description": "Restart the stack and the courses are still there.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "The media volume",
+              "description": "An uploaded video survives a backend rebuild.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Wait for a primary",
+              "description": "The backend should not start before the replica set is up.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "A calm demo setup",
+          "description": "Commands and what success looks like.",
+          "lessons": [
+            {
+              "title": "docker compose up --build",
+              "description": "The command, the first-run wait, and the URL.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Logs when something fails",
+              "description": "Which service to read first.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "What not to commit",
+              "description": ".env, uploaded videos, and dependency folders.",
+              "minutes": 9,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "cybersecurity",
+      "title": "Cybersecurity",
+      "domain": "TECHNICAL",
+      "category": "security",
+      "difficulty": "BEGINNER",
+      "instructor": "arjun",
+      "shortDescription": "Protect accounts, tokens, and uploads in a student project.",
+      "description": "Practical defensive habits: password hashing, authorization, upload checks, and the data you must not send to an AI provider.",
+      "learningObjectives": [
+        "Hash passwords and never return the hash",
+        "Check role and ownership on the server",
+        "Validate an upload beyond its file name",
+        "Keep secrets in the environment"
+      ],
+      "prerequisites": [
+        "A basic idea of web requests"
+      ],
+      "targetAudience": [
+        "Students securing an academic web project"
+      ],
+      "tags": [
+        "security",
+        "auth",
+        "uploads"
+      ],
+      "skills": [
+        "application security",
+        "authorization"
+      ],
+      "language": "English",
+      "status": "PUBLISHED",
+      "rejectionReason": null,
+      "sections": [
+        {
+          "title": "Identity",
+          "description": "Passwords and sessions.",
+          "lessons": [
+            {
+              "title": "Why the database stores a hash",
+              "description": "A leak of the user document must not reveal the password.",
+              "minutes": 11,
+              "access": "FREE_PREVIEW",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Access tokens expire",
+              "description": "A stolen short-lived token is a smaller problem.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Logout that can revoke a refresh token",
+              "description": "Deleting the cookie is not the whole story.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Authorization",
+          "description": "Hiding a button is not a control.",
+          "lessons": [
+            {
+              "title": "Role checks on the API",
+              "description": "A student token calling an admin path gets 403.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Ownership of a course",
+              "description": "Another instructor's id in the URL must fail.",
+              "minutes": 13,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Enrolled-only video",
+              "description": "A direct link without a ticket or enrollment does not play.",
+              "minutes": 13,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Everything else that leaks",
+          "description": "Uploads, logs, and prompts.",
+          "lessons": [
+            {
+              "title": "Magic bytes, size, and a safe file name",
+              "description": "Do not trust the browser's file name.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Logs without tokens",
+              "description": "A helpful log can become a secret store.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "What never goes to Gemini",
+              "description": "Passwords, JWTs, and unrelated personal history.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "computer-networks",
+      "title": "Computer Networks",
+      "domain": "TECHNICAL",
+      "category": "networks",
+      "difficulty": "BEGINNER",
+      "instructor": "arjun",
+      "shortDescription": "Follow a request from the browser to MongoDB.",
+      "description": "HTTP, DNS-style names, ports, and proxies, taught with this platform's actual path: browser, nginx, Spring Boot, MongoDB.",
+      "learningObjectives": [
+        "Read a URL",
+        "Explain a reverse proxy",
+        "Describe an HTTP status you use in the app",
+        "Say why video playback needs range requests"
+      ],
+      "prerequisites": [
+        "No networking course is required"
+      ],
+      "targetAudience": [
+        "Students demoing a Dockerized web app"
+      ],
+      "tags": [
+        "http",
+        "networks",
+        "proxy"
+      ],
+      "skills": [
+        "computer networks",
+        "HTTP"
+      ],
+      "language": "English",
+      "status": "PUBLISHED",
+      "rejectionReason": null,
+      "sections": [
+        {
+          "title": "Names and ports",
+          "description": "Who is listening where.",
+          "lessons": [
+            {
+              "title": "localhost:3000 is the frontend",
+              "description": "The browser never needs the MongoDB port.",
+              "minutes": 10,
+              "access": "FREE_PREVIEW",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A service name on the Docker network",
+              "description": "backend resolves mongo. Your laptop does not, unless you publish the port.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "HTTPS later, HTTP here",
+              "description": "Cookie secure flags follow the real scheme.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "HTTP that this app speaks",
+          "description": "Methods, status, and headers.",
+          "lessons": [
+            {
+              "title": "GET, POST, PUT, and DELETE in Lumina",
+              "description": "Match the method to the action.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "401 and 403 are different",
+              "description": "Not logged in, versus logged in and not allowed.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Authorization and cookies",
+              "description": "The access token is a header. The refresh token is a cookie.",
+              "minutes": 13,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Moving a video",
+          "description": "Bytes, ranges, and uploads.",
+          "lessons": [
+            {
+              "title": "Why a video request sends Range",
+              "description": "Seeking needs a slice, not the whole file again.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Upload limits in two places",
+              "description": "Nginx and Spring must both allow the file.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A timeout is a network fact",
+              "description": "The AI call has a deadline. The page should say so.",
+              "minutes": 9,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "operating-systems",
+      "title": "Operating Systems",
+      "domain": "TECHNICAL",
+      "category": "os",
+      "difficulty": "INTERMEDIATE",
+      "instructor": "arjun",
+      "shortDescription": "Processes, files, and memory, tied to how this app runs.",
+      "description": "An operating-systems course that keeps returning to the running platform: processes in containers, files on a volume, and what a crash does to an upload.",
+      "learningObjectives": [
+        "Describe a process and a file",
+        "Explain a crash during a two-step write",
+        "Read a path and spot traversal",
+        "Connect a volume mount to a filesystem"
+      ],
+      "prerequisites": [
+        "Introductory programming"
+      ],
+      "targetAudience": [
+        "Students in an OS or ADBMS course who want concrete examples"
+      ],
+      "tags": [
+        "operating-systems",
+        "files",
+        "processes"
+      ],
+      "skills": [
+        "operating systems",
+        "file systems"
+      ],
+      "language": "English",
+      "status": "PUBLISHED",
+      "rejectionReason": null,
+      "sections": [
+        {
+          "title": "Processes and isolation",
+          "description": "What a container changes, and what it does not.",
+          "lessons": [
+            {
+              "title": "A process inside a container",
+              "description": "Still a process. The namespace is the fence.",
+              "minutes": 12,
+              "access": "FREE_PREVIEW",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "The JVM and the event loop are not the OS",
+              "description": "Name the layer you are debugging.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Restart is not undo",
+              "description": "A restart policy brings the process back. It does not roll back a write.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Files",
+          "description": "Paths, permissions, and partial writes.",
+          "lessons": [
+            {
+              "title": "A storage key is not a user path",
+              "description": "Reject .. and keep files under the media root.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Write temp, then move",
+              "description": "The upload consistency pattern used by Lumina.",
+              "minutes": 13,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A crash between disk and database",
+              "description": "Orphan files, and the sweeper that cleans them.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Memory and concurrency",
+          "description": "Two requests at once.",
+          "lessons": [
+            {
+              "title": "Two progress updates",
+              "description": "An atomic update so an older percent cannot win by accident.",
+              "minutes": 13,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Optimistic locking on a course",
+              "description": "Two curriculum edits, one version field.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "What the OS does not know about your schema",
+              "description": "Integrity is your job and the database's job.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "ui-ux-design",
+      "title": "UI/UX Design",
+      "domain": "TECHNICAL",
+      "category": "ui-ux",
+      "difficulty": "BEGINNER",
+      "instructor": "elena",
+      "shortDescription": "Design a learning screen people can finish using.",
+      "description": "Hierarchy, type, spacing, empty states, and forms. The examples are course cards, a player, and an instructor form, not abstract posters.",
+      "learningObjectives": [
+        "Set a visual hierarchy",
+        "Write an empty state that tells the user what to do",
+        "Label a form so it can be completed",
+        "Check a flow on a narrow screen"
+      ],
+      "prerequisites": [
+        "No design tool is required"
+      ],
+      "targetAudience": [
+        "Students polishing an academic project UI"
+      ],
+      "tags": [
+        "ui",
+        "ux",
+        "design"
+      ],
+      "skills": [
+        "UI design",
+        "UX writing"
+      ],
+      "language": "English",
+      "status": "PUBLISHED",
+      "rejectionReason": null,
+      "sections": [
+        {
+          "title": "Hierarchy and type",
+          "description": "What the eye should hit first.",
+          "lessons": [
+            {
+              "title": "One job for the course card",
+              "description": "Title, instructor, difficulty, and time. Not every field.",
+              "minutes": 11,
+              "access": "FREE_PREVIEW",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Serif for titles, sans for UI",
+              "description": "A simple type system you can explain.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Spacing is a decision",
+              "description": "Related items closer than unrelated groups.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "States",
+          "description": "Loading, empty, error, and success.",
+          "lessons": [
+            {
+              "title": "A skeleton is not a spinner forever",
+              "description": "Show the shape of the page while data loads.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Empty does not mean broken",
+              "description": "No enrollments yet, and a link to the catalog.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Errors next to the cause",
+              "description": "A toast for the action, a field message for the input.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Flows",
+          "description": "From browse to lesson.",
+          "lessons": [
+            {
+              "title": "The enroll decision",
+              "description": "Outcome, time, and a clear button.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A player that says the video is missing",
+              "description": "A placeholder is more honest than a broken control.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Check the phone width",
+              "description": "The sidebar moves. The button stays reachable.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "3d-modeling-and-animation",
+      "title": "3D Modeling and Animation",
+      "domain": "TECHNICAL",
+      "category": "3d",
+      "difficulty": "BEGINNER",
+      "instructor": "elena",
+      "shortDescription": "Model a simple object and move it with intent.",
+      "description": "A beginner path through modeling, materials, and a short animation. This seeded course is marked rejected so the moderation demo has a real reason and a real instructor response.",
+      "learningObjectives": [
+        "Navigate a 3D viewport",
+        "Block out a simple prop",
+        "Name a modeling mistake",
+        "Plan a two-second animation"
+      ],
+      "prerequisites": [
+        "No 3D tool experience is required"
+      ],
+      "targetAudience": [
+        "Students exploring technical art"
+      ],
+      "tags": [
+        "3d",
+        "animation",
+        "modeling"
+      ],
+      "skills": [
+        "3D modeling",
+        "animation"
+      ],
+      "language": "English",
+      "status": "REJECTED",
+      "rejectionReason": "The curriculum is useful, but the submission did not include learning objectives for the animation section or a note about which tool the lessons assume. Add the tool name and the missing objectives, then submit again.",
+      "sections": [
+        {
+          "title": "The viewport",
+          "description": "Move, look, and do not get lost.",
+          "lessons": [
+            {
+              "title": "Orbit, pan, and frame the object",
+              "description": "The three moves you need before any tool.",
+              "minutes": 11,
+              "access": "FREE_PREVIEW",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A cube is a starting point",
+              "description": "Scale it into a desk lamp base.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Save versions",
+              "description": "A bad extrude should not destroy the only file.",
+              "minutes": 9,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Form",
+          "description": "Shape with a limit.",
+          "lessons": [
+            {
+              "title": "Extrude with a reason",
+              "description": "Add a detail you can name.",
+              "minutes": 13,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Too much geometry too early",
+              "description": "Why the first pass should stay blocky.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A simple material",
+              "description": "One color and a rough/smooth choice.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Motion",
+          "description": "A short, readable animation.",
+          "lessons": [
+            {
+              "title": "Keyframes on two poses",
+              "description": "Start and end, then look at the in-between.",
+              "minutes": 13,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Timing over complexity",
+              "description": "A two-second move you can critique.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "What to submit for review",
+              "description": "A still, a turntable, and a note about what is unfinished.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "vfx-and-cgi",
+      "title": "VFX and CGI",
+      "domain": "TECHNICAL",
+      "category": "vfx",
+      "difficulty": "INTERMEDIATE",
+      "instructor": "elena",
+      "shortDescription": "Follow a shot from plate to a composite you can critique.",
+      "description": "An intermediate look at a visual-effects shot: reference, roto, a simple element, and review notes. Seeded as pending review so an admin can approve it during the demo.",
+      "learningObjectives": [
+        "Read a shot brief",
+        "Separate a plate from an added element",
+        "Give a note that a teammate can act on",
+        "List what this course cannot finish without footage"
+      ],
+      "prerequisites": [
+        "A beginner 3D or design course helps"
+      ],
+      "targetAudience": [
+        "Students interested in technical art pipelines"
+      ],
+      "tags": [
+        "vfx",
+        "cgi",
+        "compositing"
+      ],
+      "skills": [
+        "VFX",
+        "CGI",
+        "review"
+      ],
+      "language": "English",
+      "status": "PENDING_REVIEW",
+      "rejectionReason": null,
+      "sections": [
+        {
+          "title": "A shot, not a montage",
+          "description": "Start with a brief.",
+          "lessons": [
+            {
+              "title": "What the shot must communicate",
+              "description": "One sentence before any software.",
+              "minutes": 11,
+              "access": "FREE_PREVIEW",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Reference and a limit",
+              "description": "Collect two references and write what you will not attempt.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "The plate and the added piece",
+              "description": "Name which pixels you are allowed to change.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "A simple element",
+          "description": "One addition, done carefully.",
+          "lessons": [
+            {
+              "title": "Roto as a boundary",
+              "description": "A mask is a decision about what belongs.",
+              "minutes": 13,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Light that matches",
+              "description": "Direction and softness before color grading tricks.",
+              "minutes": 13,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A composite you can toggle",
+              "description": "Show the shot with and without the element.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Review",
+          "description": "Notes that improve the next version.",
+          "lessons": [
+            {
+              "title": "A critique with a verb",
+              "description": "Soften the shadow, do not say make it pop.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Version the shot",
+              "description": "v01 and v02, with a sentence of what changed.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Ready for a teacher to review",
+              "description": "What an admin should see before approving this course.",
+              "minutes": 9,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "communication-skills",
+      "title": "Communication Skills",
+      "domain": "NON_TECHNICAL",
+      "category": "communication-skills",
+      "difficulty": "BEGINNER",
+      "instructor": "kabir",
+      "shortDescription": "Say the thing you mean, in fewer words.",
+      "description": "Everyday professional communication: a message, a question, and a disagreement that does not waste the room. Built for students who also have to explain a project.",
+      "learningObjectives": [
+        "State a point in one sentence",
+        "Ask a question that can be answered",
+        "Write a short update",
+        "Disagree without a speech"
+      ],
+      "prerequisites": [
+        "No prior course is required"
+      ],
+      "targetAudience": [
+        "Students preparing project reviews and internships"
+      ],
+      "tags": [
+        "communication",
+        "writing",
+        "meetings"
+      ],
+      "skills": [
+        "communication",
+        "professional writing"
+      ],
+      "language": "English",
+      "status": "PUBLISHED",
+      "rejectionReason": null,
+      "sections": [
+        {
+          "title": "The point",
+          "description": "Lead with it.",
+          "lessons": [
+            {
+              "title": "One sentence before the background",
+              "description": "The listener should know the request early.",
+              "minutes": 10,
+              "access": "FREE_PREVIEW",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Cut the warm-up",
+              "description": "A project update does not need a history of the internet.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A subject line that works",
+              "description": "Name the course, the action, and the deadline.",
+              "minutes": 9,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Questions and listening",
+          "description": "Get information, do not perform confusion.",
+          "lessons": [
+            {
+              "title": "A question with context",
+              "description": "What you tried, what you saw, what you need.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Listen for the constraint",
+              "description": "Time, skill, and permission are different blockers.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Repeat the decision",
+              "description": "End a conversation with who does what.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Difficult moments",
+          "description": "Feedback and disagreement.",
+          "lessons": [
+            {
+              "title": "A note about the work, not the person",
+              "description": "The lesson title is vague. Not you are vague.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Disagree in a review",
+              "description": "Offer the alternative and the reason.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A two-minute project explanation",
+              "description": "Problem, what you built, what still fails.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "spoken-english",
+      "title": "Spoken English",
+      "domain": "NON_TECHNICAL",
+      "category": "spoken-english",
+      "difficulty": "BEGINNER",
+      "instructor": "kabir",
+      "shortDescription": "Speak in complete, calm sentences you can repeat.",
+      "description": "Practice for students who understand English and want it to come out more clearly in class, demos, and interviews. Accent is not the target. Clarity is.",
+      "learningObjectives": [
+        "Introduce yourself in four sentences",
+        "Explain a technical idea without reading a slide",
+        "Ask for repetition politely",
+        "Slow down on the important noun"
+      ],
+      "prerequisites": [
+        "School-level English reading"
+      ],
+      "targetAudience": [
+        "Students preparing vivas and interviews"
+      ],
+      "tags": [
+        "spoken-english",
+        "clarity",
+        "practice"
+      ],
+      "skills": [
+        "spoken English",
+        "presentation"
+      ],
+      "language": "English",
+      "status": "PUBLISHED",
+      "rejectionReason": null,
+      "sections": [
+        {
+          "title": "Sentences you can stand on",
+          "description": "Short and finished.",
+          "lessons": [
+            {
+              "title": "A four-sentence introduction",
+              "description": "Name, study, project, and what you want feedback on.",
+              "minutes": 11,
+              "access": "FREE_PREVIEW",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Stress the word that matters",
+              "description": "The database, not every syllable equally.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Pause instead of filling",
+              "description": "Silence is cleaner than a long filler.",
+              "minutes": 9,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Explain a project",
+          "description": "The words for this viva.",
+          "lessons": [
+            {
+              "title": "What the system does",
+              "description": "Students enroll. Progress is saved. An admin approves.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Why MongoDB",
+              "description": "One clear reason, then one trade-off.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "I do not know, and here is the limit",
+              "description": "A strong sentence when a question is outside the build.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Repair and practice",
+          "description": "When the sentence breaks.",
+          "lessons": [
+            {
+              "title": "Ask them to repeat",
+              "description": "Polite phrases that do not apologize for existing.",
+              "minutes": 9,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Rephrase a jargon pile",
+              "description": "Say the same feature in everyday words.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A three-minute daily drill",
+              "description": "Record, listen once, fix one thing.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "public-speaking",
+      "title": "Public Speaking",
+      "domain": "NON_TECHNICAL",
+      "category": "public-speaking",
+      "difficulty": "BEGINNER",
+      "instructor": "kabir",
+      "shortDescription": "Give a short talk that a tired room can follow.",
+      "description": "Structure, nerves, and a project demo. You will plan a six-minute evaluation talk with a beginning that states the point.",
+      "learningObjectives": [
+        "Open with the result",
+        "Use a slide only when it carries evidence",
+        "Recover from a blank moment",
+        "End with a limitation, not a slogan"
+      ],
+      "prerequisites": [
+        "Willingness to practice out loud"
+      ],
+      "targetAudience": [
+        "Students facing a project viva or demo day"
+      ],
+      "tags": [
+        "public-speaking",
+        "presentation",
+        "demo"
+      ],
+      "skills": [
+        "public speaking",
+        "demos"
+      ],
+      "language": "English",
+      "status": "PUBLISHED",
+      "rejectionReason": null,
+      "sections": [
+        {
+          "title": "Structure",
+          "description": "The talk is a path.",
+          "lessons": [
+            {
+              "title": "Result, then how",
+              "description": "Do not save the point for minute five.",
+              "minutes": 10,
+              "access": "FREE_PREVIEW",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Three beats for a project demo",
+              "description": "Who it is for, the path you will click, the data you will show.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A slide with one claim",
+              "description": "If the slide has two claims, it has a crowd.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Delivery",
+          "description": "Body, pace, and nerves.",
+          "lessons": [
+            {
+              "title": "Stand still on the important sentence",
+              "description": "Movement is fine. Fidgeting on the conclusion is not.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A blank moment script",
+              "description": "The sentence that buys you two seconds.",
+              "minutes": 9,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Look at a person, not the screen",
+              "description": "The screen is not the audience.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "The evaluation",
+          "description": "A talk you can reuse.",
+          "lessons": [
+            {
+              "title": "Show the database, not only the UI",
+              "description": "A progress document is more convincing than a percentage badge.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Invite one hard question",
+              "description": "Authorization or consistency. Pick the one you can answer.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Close on a real limit",
+              "description": "Videos are not transcribed. Say that, then stop.",
+              "minutes": 9,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "business-and-entrepreneurship",
+      "title": "Business and Entrepreneurship",
+      "domain": "NON_TECHNICAL",
+      "category": "entrepreneurship",
+      "difficulty": "BEGINNER",
+      "instructor": "kabir",
+      "shortDescription": "Test an idea before you build a company around it.",
+      "description": "A student-scale entrepreneurship course: audience, offer, and a conversation that can kill a weak idea early. No business-plan theater.",
+      "learningObjectives": [
+        "Name a specific user",
+        "Write an offer in one sentence",
+        "List the assumption that would make the idea fail",
+        "Plan a conversation, not a pitch deck"
+      ],
+      "prerequisites": [
+        "No business background is required"
+      ],
+      "targetAudience": [
+        "Students with a side project or a final-year idea"
+      ],
+      "tags": [
+        "entrepreneurship",
+        "ideas",
+        "customers"
+      ],
+      "skills": [
+        "entrepreneurship",
+        "customer interviews"
+      ],
+      "language": "English",
+      "status": "PUBLISHED",
+      "rejectionReason": null,
+      "sections": [
+        {
+          "title": "Who is it for",
+          "description": "A person, not a market slide.",
+          "lessons": [
+            {
+              "title": "A student with a Tuesday problem",
+              "description": "Narrow the user until you can imagine their week.",
+              "minutes": 11,
+              "access": "FREE_PREVIEW",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "The job they are hiring the product for",
+              "description": "Pass a course, or feel less lost. Those are different jobs.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Who it is not for",
+              "description": "Saying no is part of the design.",
+              "minutes": 9,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "The offer",
+          "description": "What changes after they use it.",
+          "lessons": [
+            {
+              "title": "One sentence, no adjectives pile",
+              "description": "What it does, for whom, and the result.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "The assumption that can kill it",
+              "description": "Write it down before you write code.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A price is a hypothesis",
+              "description": "Even a free academic project has a cost in time.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Evidence",
+          "description": "Talk to people.",
+          "lessons": [
+            {
+              "title": "Five conversations",
+              "description": "Questions that do not beg for praise.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "What a polite yes is worth",
+              "description": "Less than a story about the last time they tried.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Decide to continue or stop",
+              "description": "A small written decision beats another feature.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "digital-marketing",
+      "title": "Digital Marketing",
+      "domain": "NON_TECHNICAL",
+      "category": "digital-marketing",
+      "difficulty": "BEGINNER",
+      "instructor": "kabir",
+      "shortDescription": "Explain a course to the student who needs it.",
+      "description": "Audience, message, and a simple way to tell whether anyone cared. Applied to publishing a course, not to buying ads you cannot measure.",
+      "learningObjectives": [
+        "Describe an audience without stereotypes",
+        "Write a course blurb that states the outcome",
+        "Pick one channel you can actually use",
+        "Read a small result without inflating it"
+      ],
+      "prerequisites": [
+        "No marketing job is required"
+      ],
+      "targetAudience": [
+        "Instructors and students who will present a product"
+      ],
+      "tags": [
+        "marketing",
+        "writing",
+        "audience"
+      ],
+      "skills": [
+        "digital marketing",
+        "positioning"
+      ],
+      "language": "English",
+      "status": "PUBLISHED",
+      "rejectionReason": null,
+      "sections": [
+        {
+          "title": "Audience",
+          "description": "Who is already looking.",
+          "lessons": [
+            {
+              "title": "A student the week before a viva",
+              "description": "Their search is specific. Your title should be too.",
+              "minutes": 11,
+              "access": "FREE_PREVIEW",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Pain, job, and proof",
+              "description": "Three lines that can become a course page.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Language they use",
+              "description": "Steal the phrasing from questions, not from ads.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Message",
+          "description": "The page and the title.",
+          "lessons": [
+            {
+              "title": "A title that can be found",
+              "description": "Specific beats clever.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A short description with an outcome",
+              "description": "What they can do after the course.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A claim you can support",
+              "description": "Do not write AI-powered if the feature is a prompt box.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "A small loop",
+          "description": "Publish, look, adjust.",
+          "lessons": [
+            {
+              "title": "One channel for a student project",
+              "description": "A class group, a demo, a README. Pick one.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "What a view does not mean",
+              "description": "Opened is not enrolled. Enrolled is not completed.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Change one sentence",
+              "description": "Then look again. Do not redesign the logo.",
+              "minutes": 9,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "personal-finance",
+      "title": "Personal Finance",
+      "domain": "NON_TECHNICAL",
+      "category": "personal-finance",
+      "difficulty": "BEGINNER",
+      "instructor": "kabir",
+      "shortDescription": "Make a student budget you can keep for a month.",
+      "description": "Income, spending, and a simple emergency buffer. Numbers are examples in rupees so the exercises feel local, not imported slogans.",
+      "learningObjectives": [
+        "List money in and money out for one month",
+        "Separate needs from wants without shame",
+        "Set a small buffer goal",
+        "Spot a fee you did not notice"
+      ],
+      "prerequisites": [
+        "No finance background is required"
+      ],
+      "targetAudience": [
+        "College students managing a stipend or first salary"
+      ],
+      "tags": [
+        "finance",
+        "budget",
+        "students"
+      ],
+      "skills": [
+        "personal finance",
+        "budgeting"
+      ],
+      "language": "English",
+      "status": "PUBLISHED",
+      "rejectionReason": null,
+      "sections": [
+        {
+          "title": "The month you are in",
+          "description": "Facts before advice.",
+          "lessons": [
+            {
+              "title": "Write the money that arrives",
+              "description": "Stipend, family support, or a part-time shift. Name the source.",
+              "minutes": 10,
+              "access": "FREE_PREVIEW",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Track one week of spending",
+              "description": "A note on your phone is enough. A perfect app is not.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Needs, wants, and the blurry middle",
+              "description": "Food is a need. The expensive snack is a choice.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "A buffer, not a personality",
+          "description": "Small and specific.",
+          "lessons": [
+            {
+              "title": "A one-month buffer goal",
+              "description": "Pick a number you could reach, then the weekly piece.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Fees and subscriptions",
+              "description": "Find one charge you forgot.",
+              "minutes": 9,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A purchase pause rule",
+              "description": "Wait a day above a number you choose.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Talking about money",
+          "description": "With family, friends, and a future employer.",
+          "lessons": [
+            {
+              "title": "A sentence for a family conversation",
+              "description": "Here is the plan, here is what I am asking.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Reading a first salary offer",
+              "description": "Gross, deductions, and what reaches the account.",
+              "minutes": 13,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "What this course will not do",
+              "description": "It will not pick a stock for you.",
+              "minutes": 8,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "productivity-and-time-management",
+      "title": "Productivity and Time Management",
+      "domain": "NON_TECHNICAL",
+      "category": "productivity",
+      "difficulty": "BEGINNER",
+      "instructor": "kabir",
+      "shortDescription": "Plan a study week you can survive.",
+      "description": "A calm productivity course: one list, time blocks, and a review. It does not ask you to wake up at 5 a.m.",
+      "learningObjectives": [
+        "Choose three outcomes for a week",
+        "Block time for hard work",
+        "Stop when the block ends",
+        "Review without insulting yourself"
+      ],
+      "prerequisites": [
+        "No tools beyond a notebook or a notes app"
+      ],
+      "targetAudience": [
+        "Students juggling labs, a project, and exams"
+      ],
+      "tags": [
+        "productivity",
+        "time",
+        "study"
+      ],
+      "skills": [
+        "time management",
+        "study planning"
+      ],
+      "language": "English",
+      "status": "PUBLISHED",
+      "rejectionReason": null,
+      "sections": [
+        {
+          "title": "Less, on purpose",
+          "description": "Choose.",
+          "lessons": [
+            {
+              "title": "Three outcomes, not thirty tasks",
+              "description": "Finish the enrollment demo is an outcome. Reply to chats is not.",
+              "minutes": 10,
+              "access": "FREE_PREVIEW",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A task that fits in one sitting",
+              "description": "If it needs a week, it is still a project.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Drop something in writing",
+              "description": "The list of what you will not do this week.",
+              "minutes": 9,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Time on a calendar",
+          "description": "Blocks, not vibes.",
+          "lessons": [
+            {
+              "title": "A 50-minute deep block",
+              "description": "One tab, one outcome, a visible end.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Admin time is allowed",
+              "description": "Email and forms get a block so they do not eat the morning.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "When the day breaks",
+              "description": "A reset rule for the evening, not a new personality.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Review",
+          "description": "Look back once.",
+          "lessons": [
+            {
+              "title": "Friday in ten minutes",
+              "description": "What finished, what moved, what was a guess.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Energy is data",
+              "description": "Note the hour you do your best technical work.",
+              "minutes": 9,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A plan for project week",
+              "description": "Demo, report, and sleep as three real items.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "creative-writing",
+      "title": "Creative Writing",
+      "domain": "NON_TECHNICAL",
+      "category": "creative-writing",
+      "difficulty": "BEGINNER",
+      "instructor": "elena",
+      "shortDescription": "Write a scene a reader can see.",
+      "description": "Concrete detail, dialogue, and revision. Short exercises, not a novel contract. Useful for students who also need to write a project report that a human can read.",
+      "learningObjectives": [
+        "Replace an abstract sentence with a concrete one",
+        "Write a page of dialogue",
+        "Cut a paragraph that repeats",
+        "Give useful feedback on someone else's page"
+      ],
+      "prerequisites": [
+        "Willingness to write badly in a first draft"
+      ],
+      "targetAudience": [
+        "Students who want to write, including report writers"
+      ],
+      "tags": [
+        "writing",
+        "fiction",
+        "revision"
+      ],
+      "skills": [
+        "creative writing",
+        "revision"
+      ],
+      "language": "English",
+      "status": "PUBLISHED",
+      "rejectionReason": null,
+      "sections": [
+        {
+          "title": "See it",
+          "description": "Specific beats general.",
+          "lessons": [
+            {
+              "title": "A room in eight concrete words",
+              "description": "Objects, not moods.",
+              "minutes": 10,
+              "access": "FREE_PREVIEW",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A character wants something now",
+              "description": "Not in life. In this scene.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "The sentence you can cut",
+              "description": "If it restates the previous one, it can go.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "People talking",
+          "description": "Dialogue with a job.",
+          "lessons": [
+            {
+              "title": "Two people, one disagreement",
+              "description": "They should not sound like the same person.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Subtext",
+              "description": "What they do not say is the scene.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A page you can read aloud",
+              "description": "The test for rhythm.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Revision and notes",
+          "description": "The second pass.",
+          "lessons": [
+            {
+              "title": "Change the opening",
+              "description": "Start later than you think.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A feedback note with a question",
+              "description": "Where did you stop believing this.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A report can use the same muscle",
+              "description": "Concrete, short, and willing to cut.",
+              "minutes": 9,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "photography",
+      "title": "Photography",
+      "domain": "NON_TECHNICAL",
+      "category": "photography",
+      "difficulty": "BEGINNER",
+      "instructor": "elena",
+      "shortDescription": "Make a clearer photo with the light you have.",
+      "description": "Composition, light, and a simple edit. A phone is enough. The course cares about decisions, not about buying a camera.",
+      "learningObjectives": [
+        "Frame a subject on purpose",
+        "Use window light",
+        "Edit one thing, not ten",
+        "Sequence five photos into a small story"
+      ],
+      "prerequisites": [
+        "A phone camera is enough"
+      ],
+      "targetAudience": [
+        "Beginners and design students collecting portfolio images"
+      ],
+      "tags": [
+        "photography",
+        "light",
+        "composition"
+      ],
+      "skills": [
+        "photography",
+        "composition"
+      ],
+      "language": "English",
+      "status": "PUBLISHED",
+      "rejectionReason": null,
+      "sections": [
+        {
+          "title": "Frame",
+          "description": "What you leave out.",
+          "lessons": [
+            {
+              "title": "Subject, then background",
+              "description": "Move your feet before you zoom.",
+              "minutes": 11,
+              "access": "FREE_PREVIEW",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Edges of the frame",
+              "description": "Check the corners before you shoot.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "One photo, one idea",
+              "description": "If you need a caption to explain two ideas, shoot again.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Light",
+          "description": "The free kind.",
+          "lessons": [
+            {
+              "title": "Window light on a face",
+              "description": "Direction and the shadow you keep.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Hard light and open shade",
+              "description": "When to step out of the sun.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A white balance you can explain",
+              "description": "Warm window, cool shade, and a choice.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "A small set",
+          "description": "Edit and sequence.",
+          "lessons": [
+            {
+              "title": "Crop and one exposure change",
+              "description": "Stop before the photo looks processed.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Five photos, one walk",
+              "description": "Beginning, detail, person, place, ending.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A caption that does not repeat the picture",
+              "description": "Add the fact the photo cannot show.",
+              "minutes": 9,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "graphic-design",
+      "title": "Graphic Design",
+      "domain": "NON_TECHNICAL",
+      "category": "graphic-design",
+      "difficulty": "BEGINNER",
+      "instructor": "elena",
+      "shortDescription": "Arrange type and image so the message survives.",
+      "description": "Hierarchy, alignment, and a one-page poster for a course. You will critique spacing before you hunt for a new font.",
+      "learningObjectives": [
+        "Set a hierarchy with type size and weight",
+        "Align elements to a simple grid",
+        "Choose a limited palette",
+        "Critique a poster in specific words"
+      ],
+      "prerequisites": [
+        "No design software expertise is required"
+      ],
+      "targetAudience": [
+        "Students making posters, slides, or course thumbnails"
+      ],
+      "tags": [
+        "graphic-design",
+        "typography",
+        "layout"
+      ],
+      "skills": [
+        "graphic design",
+        "typography"
+      ],
+      "language": "English",
+      "status": "PUBLISHED",
+      "rejectionReason": null,
+      "sections": [
+        {
+          "title": "Hierarchy",
+          "description": "What is read first.",
+          "lessons": [
+            {
+              "title": "Title, then support, then detail",
+              "description": "Three levels are enough for a poster.",
+              "minutes": 11,
+              "access": "FREE_PREVIEW",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Alignment is invisible when it works",
+              "description": "A grid of two columns, used honestly.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Space is an element",
+              "description": "Do not fill the corner because it feels empty.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Type and color",
+          "description": "Fewer choices, better work.",
+          "lessons": [
+            {
+              "title": "Two typefaces, or one",
+              "description": "A serif and a sans, with a reason.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A palette of three",
+              "description": "Ink, paper, and one accent. Lumina is the example.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Contrast you can test",
+              "description": "If the text disappears in sunlight, it fails.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "A course poster",
+          "description": "Make one, then cut it.",
+          "lessons": [
+            {
+              "title": "The sentence the poster must say",
+              "description": "Write it before you open a tool.",
+              "minutes": 9,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A thumbnail at small size",
+              "description": "If the title dies at card size, the layout is wrong.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Notes you can give a classmate",
+              "description": "Point to a specific alignment, not the vibe.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "leadership-and-teamwork",
+      "title": "Leadership and Teamwork",
+      "domain": "NON_TECHNICAL",
+      "category": "leadership",
+      "difficulty": "BEGINNER",
+      "instructor": "kabir",
+      "shortDescription": "Run a student project team without becoming the only person who works.",
+      "description": "Roles, meetings, and feedback for a four-person academic team. Practical, short, and allergic to leadership quotes.",
+      "learningObjectives": [
+        "Split work so it can be finished",
+        "Run a 15-minute meeting",
+        "Give feedback on a deliverable",
+        "Notice when you are doing everyone else's task"
+      ],
+      "prerequisites": [
+        "Experience of at least one group assignment"
+      ],
+      "targetAudience": [
+        "Final-year project teams"
+      ],
+      "tags": [
+        "leadership",
+        "teams",
+        "feedback"
+      ],
+      "skills": [
+        "teamwork",
+        "leadership"
+      ],
+      "language": "English",
+      "status": "PUBLISHED",
+      "rejectionReason": null,
+      "sections": [
+        {
+          "title": "Work, named",
+          "description": "Who owns the outcome.",
+          "lessons": [
+            {
+              "title": "A role is an outcome, not a title",
+              "description": "Database owner means the schema page exists.",
+              "minutes": 11,
+              "access": "FREE_PREVIEW",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A board with three columns",
+              "description": "Not started, doing, done. Review it twice a week.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "The trap of the strongest coder",
+              "description": "If you take every hard task, the team learns nothing.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Meetings",
+          "description": "Short and decisive.",
+          "lessons": [
+            {
+              "title": "Fifteen minutes, standing",
+              "description": "What changed, what is blocked, what is next.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A decision log",
+              "description": "One line: we chose MongoDB embedding for the curriculum because we always read it together.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Conflict about quality",
+              "description": "A demo standard you agree before the week of the demo.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Feedback",
+          "description": "On the work.",
+          "lessons": [
+            {
+              "title": "A note with an example",
+              "description": "This endpoint returns 200 on failure. Here is the response.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Receive a note without a speech",
+              "description": "Repeat it, then decide.",
+              "minutes": 9,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "After the evaluation",
+              "description": "What you would keep if the course ran again.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "career-development",
+      "title": "Career Development",
+      "domain": "NON_TECHNICAL",
+      "category": "career-development",
+      "difficulty": "BEGINNER",
+      "instructor": "kabir",
+      "shortDescription": "Make a next step you can explain in a paragraph.",
+      "description": "Interests, evidence, and a small plan for the year after this semester. Not a personality test.",
+      "learningObjectives": [
+        "List evidence of work you have done",
+        "Compare two roles using real tasks",
+        "Write a project story",
+        "Ask for a conversation, not a job, in one message"
+      ],
+      "prerequisites": [
+        "No internship is required"
+      ],
+      "targetAudience": [
+        "Pre-final and final-year students"
+      ],
+      "tags": [
+        "career",
+        "portfolio",
+        "planning"
+      ],
+      "skills": [
+        "career development",
+        "storytelling"
+      ],
+      "language": "English",
+      "status": "PUBLISHED",
+      "rejectionReason": null,
+      "sections": [
+        {
+          "title": "Evidence",
+          "description": "What you have already done.",
+          "lessons": [
+            {
+              "title": "A list of finished work",
+              "description": "Labs, this project, a club, a job. Facts only.",
+              "minutes": 10,
+              "access": "FREE_PREVIEW",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Skills with a proof",
+              "description": "I used MongoDB is weaker than I designed the enrollment collection.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "What you do not want",
+              "description": "A useful filter, said early.",
+              "minutes": 9,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Roles",
+          "description": "Tasks, not titles.",
+          "lessons": [
+            {
+              "title": "A day in two jobs",
+              "description": "Backend engineer and data analyst, in tasks.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "The gap you could close in a semester",
+              "description": "One skill, one project, one person to ask.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A portfolio paragraph",
+              "description": "Problem, your part, result, limit.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Conversations",
+          "description": "People, not applications only.",
+          "lessons": [
+            {
+              "title": "A short message that respects time",
+              "description": "Who you are, why them, one question.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "What to do with the answer",
+              "description": "Write it down and change one thing.",
+              "minutes": 9,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A plan for the next 90 days",
+              "description": "Three outcomes, reviewed monthly.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "interview-preparation",
+      "title": "Interview Preparation",
+      "domain": "NON_TECHNICAL",
+      "category": "interview-prep",
+      "difficulty": "INTERMEDIATE",
+      "instructor": "kabir",
+      "shortDescription": "Practice answers you can say without performing a script.",
+      "description": "Stories, technical explanations, and a follow-up. Includes how to talk about an academic project without claiming features you did not ship.",
+      "learningObjectives": [
+        "Tell a project story in two minutes",
+        "Explain a technical choice and its trade-off",
+        "Handle a question you cannot answer",
+        "Write a follow-up note"
+      ],
+      "prerequisites": [
+        "A project you can talk about"
+      ],
+      "targetAudience": [
+        "Students in placement season or project evaluation week"
+      ],
+      "tags": [
+        "interviews",
+        "viva",
+        "communication"
+      ],
+      "skills": [
+        "interview preparation",
+        "project explanation"
+      ],
+      "language": "English",
+      "status": "PUBLISHED",
+      "rejectionReason": null,
+      "sections": [
+        {
+          "title": "Stories",
+          "description": "Specific, short, true.",
+          "lessons": [
+            {
+              "title": "Problem, action, result, limit",
+              "description": "The four beats, with the limit required.",
+              "minutes": 12,
+              "access": "FREE_PREVIEW",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Your part, not the team's fog",
+              "description": "Name what you designed and what you did not.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A failure that changed a habit",
+              "description": "One example, no tragedy performance.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "Technical answers",
+          "description": "For this project and others.",
+          "lessons": [
+            {
+              "title": "Why this database",
+              "description": "Embedding, references, and the 16 MB reason.",
+              "minutes": 13,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "How authorization works",
+              "description": "Token, role, ownership, and a 403 you have seen.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "I have not implemented that",
+              "description": "The sentence that protects your credibility.",
+              "minutes": 9,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "The room",
+          "description": "Questions, silence, and after.",
+          "lessons": [
+            {
+              "title": "A question you ask them",
+              "description": "About the work, not about the free snacks.",
+              "minutes": 10,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Silence after an answer",
+              "description": "Stop talking. Let them use it.",
+              "minutes": 8,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A follow-up the same day",
+              "description": "Thanks, one specific detail, no new essay.",
+              "minutes": 9,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "kubernetes-for-application-teams",
+      "title": "Kubernetes for Application Teams",
+      "domain": "TECHNICAL",
+      "category": "devops",
+      "difficulty": "ADVANCED",
+      "instructor": "arjun",
+      "shortDescription": "A draft course on running a small service on Kubernetes.",
+      "description": "This course is intentionally left as a draft. It shows an instructor workspace that has not been submitted. The outline is real, and the publication status is not.",
+      "learningObjectives": [
+        "Describe a pod in plain language",
+        "Separate config from an image",
+        "Name one reason not to start with Kubernetes"
+      ],
+      "prerequisites": [
+        "Docker Compose experience"
+      ],
+      "targetAudience": [
+        "Students who already deployed with Compose"
+      ],
+      "tags": [
+        "kubernetes",
+        "draft",
+        "devops"
+      ],
+      "skills": [
+        "Kubernetes",
+        "deployment"
+      ],
+      "language": "English",
+      "status": "DRAFT",
+      "rejectionReason": null,
+      "sections": [
+        {
+          "title": "Do you need this yet",
+          "description": "A honest opening.",
+          "lessons": [
+            {
+              "title": "Compose versus a cluster",
+              "description": "What you gain, and the operational cost.",
+              "minutes": 12,
+              "access": "FREE_PREVIEW",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A pod and a service",
+              "description": "The two objects you must be able to draw.",
+              "minutes": 13,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Config and secrets",
+              "description": "Still not in the image.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        },
+        {
+          "title": "A small deployment",
+          "description": "One stateless API.",
+          "lessons": [
+            {
+              "title": "An image tag you can roll back",
+              "description": "Latest is not a version.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "A readiness check",
+              "description": "The cousin of the health check in this repo.",
+              "minutes": 11,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            },
+            {
+              "title": "Where the database lives",
+              "description": "A cluster is a poor place for your only copy of data, said carefully.",
+              "minutes": 12,
+              "access": "ENROLLED_ONLY",
+              "resources": [],
+              "sampleVideo": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
