@@ -68,20 +68,20 @@ class CoreFlowIT {
 
         JsonNode category = data(exchange("/api/v1/admin/categories", HttpMethod.POST, adminToken, Map.of(
                 "name", "Programming", "description", "Code", "domain", "TECHNICAL")));
-        JsonNode course = data(exchange("/api/v1/instructor/courses", HttpMethod.POST, instructorToken, Map.of(
-                "title", "Test Java",
-                "shortDescription", "A short course",
-                "description", "A detailed description for the test course.",
-                "categoryId", category.get("id").asText(),
-                "domain", "TECHNICAL",
-                "difficulty", "BEGINNER",
-                "language", "English",
-                "learningObjectives", java.util.List.of("Read a test"),
-                "prerequisites", java.util.List.of(),
-                "targetAudience", java.util.List.of("Students"),
-                "tags", java.util.List.of("java"),
-                "skills", java.util.List.of("Java")
-        )));
+        java.util.Map<String, Object> courseBody = new java.util.HashMap<>();
+        courseBody.put("title", "Test Java");
+        courseBody.put("shortDescription", "A short course");
+        courseBody.put("description", "A detailed description for the test course.");
+        courseBody.put("categoryId", category.get("id").asText());
+        courseBody.put("domain", "TECHNICAL");
+        courseBody.put("difficulty", "BEGINNER");
+        courseBody.put("language", "English");
+        courseBody.put("learningObjectives", java.util.List.of("Read a test"));
+        courseBody.put("prerequisites", java.util.List.of());
+        courseBody.put("targetAudience", java.util.List.of("Students"));
+        courseBody.put("tags", java.util.List.of("java"));
+        courseBody.put("skills", java.util.List.of("Java"));
+        JsonNode course = data(exchange("/api/v1/instructor/courses", HttpMethod.POST, instructorToken, courseBody));
         String courseId = course.get("id").asText();
         JsonNode withSection = data(exchange("/api/v1/instructor/courses/" + courseId + "/sections", HttpMethod.POST, instructorToken,
                 Map.of("title", "Start", "description", "First section")));
