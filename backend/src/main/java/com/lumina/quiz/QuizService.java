@@ -100,7 +100,7 @@ public class QuizService {
         int max = 0;
         boolean approximate = false;
         for (Quiz.Question question : quiz.getQuestions()) {
-            AttemptRequest.AnswerRequest answer = request.answers().stream()
+            AnswerRequest answer = request.answers().stream()
                     .filter(item -> question.getQuestionId().equals(item.questionId()))
                     .findFirst().orElse(null);
             QuizAttempt.Answer scored = score(question, answer);

@@ -22,7 +22,8 @@ jobs:
           code=$?
           tail -n 120 ../mvn-test.log
           if [ "$code" -ne 0 ]; then
-            grep -E "ERROR|error:|COMPILATION ERROR|cannot find symbol|does not exist|Tests run:|BUILD FAILURE" ../mvn-test.log | head -n 40 | while IFS= read -r line; do
+            tail -n 30 ../mvn-test.log | while IFS= read -r line; do
+              [ -z "$line" ] && line="(blank)"
               echo "::error title=maven::${line}"
             done
             exit "$code"
