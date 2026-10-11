@@ -1,0 +1,34 @@
+# Secrets and local config
+.env
+.env.*
+!.env.example
+
+# Java
+backend/target/
+*.class
+*.jar
+*.war
+hs_err_pid*
+
+# Node
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+npm-debug.log*
+
+# Local media and databases
+data/
+*.mp4
+!backend/src/main/resources/sample/sample-lesson.mp4
+
+# IDE and OS
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+
+# Test and tool caches
+.m2/
+coverage/
+*.log

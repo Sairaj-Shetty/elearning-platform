@@ -1,0 +1,58 @@
+server:
+  address: 0.0.0.0
+  port: 8080
+  forward-headers-strategy: framework
+  error:
+    include-message: never
+    include-stacktrace: never
+  tomcat:
+    max-http-form-post-size: 520MB
+    max-swallow-size: 520MB
+
+spring:
+  application:
+    name: lumina
+  servlet:
+    multipart:
+      max-file-size: 500MB
+      max-request-size: 520MB
+  data:
+    mongodb:
+      uri: ${MONGODB_URI:mongodb://localhost:27017/lumina}
+      auto-index-creation: true
+  jackson:
+    default-property-inclusion: non_null
+    serialization:
+      write-dates-as-timestamps: false
+
+lumina:
+  jwt:
+    secret: ${JWT_SECRET:dev-only-change-me-please-use-32chars-min}
+    access-minutes: 30
+    refresh-days: 7
+  cors:
+    origins: ${CORS_ORIGINS:http://localhost:3000,http://localhost:5173}
+  media:
+    root: ${MEDIA_ROOT:./data/media}
+    max-video-bytes: 524288000
+    max-image-bytes: 5242880
+  seed:
+    enabled: ${SEED_ENABLED:false}
+    password: ${SEED_PASSWORD:LuminaDev#2026}
+  gemini:
+    api-key: ${GEMINI_API_KEY:}
+    model: ${GEMINI_MODEL:gemini-3.5-flash-lite}
+    timeout-seconds: 30
+  cookie:
+    secure: ${COOKIE_SECURE:false}
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+
+logging:
+  level:
+    com.lumina: INFO
+    org.springframework.security: WARN
