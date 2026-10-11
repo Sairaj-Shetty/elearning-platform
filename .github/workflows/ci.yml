@@ -8,6 +8,7 @@ permissions:
   contents: read
   issues: write
   pull-requests: write
+  statuses: write
 
 jobs:
   backend:
@@ -29,15 +30,13 @@ jobs:
           code=$?
           tail -n 80 ../mvn-test.log
           if [ "$code" -ne 0 ]; then
-            python3 - << 'PY'
-            import json
-            from pathlib import Path
-            lines = Path("../mvn-test.log").read_text(errors="replace").splitlines()
-            picked = [line for line in lines if "[ERROR]" in line or "FAILURE!" in line or "Tests run:" in line or "Caused by:" in line]
-            body = "Backend CI failed.\n\n```\n" + "\n".join((picked or lines)[-25:]) + "\n```"
-            Path("../ci-comment.json").write_text(json.dumps({"body": body[:60000]}))
-            PY
-            gh api --method POST "repos/${GITHUB_REPOSITORY}/issues/1/comments" --input ../ci-comment.json || true
+            i=0
+            grep -E "\[ERROR\]|FAILURE!|Tests run:|Caused by:" ../mvn-test.log | head -n 6 | while IFS= read -r line; do
+              i=$((i+1))
+              desc=$(printf '%s' "$line" | tr '\r' ' ' | cut -c1-130)
+              gh api --method POST "repos/${GITHUB_REPOSITORY}/statuses/${GITHUB_SHA}" \
+                -f state=failure -f context="maven-${i}" -f description="$desc" || true
+            done
             exit "$code"
           fi
 
