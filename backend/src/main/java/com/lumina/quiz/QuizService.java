@@ -158,11 +158,12 @@ public class QuizService {
                 String type = node.path("type").asText("MCQ");
                 question.setType("TRUE_FALSE".equals(type) ? QuestionType.TRUE_FALSE : "SHORT".equals(type) ? QuestionType.SHORT : QuestionType.MCQ);
                 question.setPrompt(node.path("prompt").asText(""));
-                List<String> options = new ArrayList<>();
-                node.path("options").forEach(option -> options.add(option.asText()));
-                if (question.getType() == QuestionType.TRUE_FALSE && options.size() < 2) options = List.of("True", "False");
+                List<String> parsedOptions = new ArrayList<>();
+                node.path("options").forEach(option -> parsedOptions.add(option.asText()));
+                List<String> options = question.getType() == QuestionType.TRUE_FALSE && parsedOptions.size() < 2
+                        ? List.of("True", "False") : parsedOptions;
                 question.setOptions(options);
-                question.setCorrectIndex(node.path("correctIndex").isNumber() ? node.path("correctIndex").asInt() : null);
+                question.setCorrectIndex(node.path("correctIndex").isNumber() ? Integer.valueOf(node.path("correctIndex").asInt()) : null);
                 question.setExplanation(node.path("explanation").asText(""));
                 if (question.getPrompt().isBlank()) continue;
                 if (question.getType() != QuestionType.SHORT && (question.getCorrectIndex() == null || question.getCorrectIndex() < 0 || question.getCorrectIndex() >= question.getOptions().size())) {
