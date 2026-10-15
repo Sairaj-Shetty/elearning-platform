@@ -216,6 +216,20 @@ function Editor({ course, onChange, onAct, onReload }: {
       toast("Thumbnail saved.");
     } catch (err) { toast(apiErrorMessage(err), "bad"); }
   }
+  async function deleteSection(sectionId: string) {
+    if (!window.confirm("Delete this section and its lessons?")) return;
+    try {
+      onChange(await api<CourseDetail>(`/api/v1/instructor/courses/${course.id}/sections/${sectionId}`, { method: "DELETE" }));
+      toast("Section deleted.");
+    } catch (err) { toast(apiErrorMessage(err), "bad"); }
+  }
+  async function deleteLesson(lessonId: string) {
+    if (!window.confirm("Delete this lesson?")) return;
+    try {
+      onChange(await api<CourseDetail>(`/api/v1/instructor/courses/${course.id}/lessons/${lessonId}`, { method: "DELETE" }));
+      toast("Lesson deleted.");
+    } catch (err) { toast(apiErrorMessage(err), "bad"); }
+  }
   async function deleteVideo(lessonId: string) {
     try {
       await api(`/api/v1/instructor/courses/${course.id}/lessons/${lessonId}/video`, { method: "DELETE" });
@@ -285,7 +299,7 @@ function Editor({ course, onChange, onAct, onReload }: {
       </div>
       <p className="muted">Status {course.status}. {course.rejectionReason ? `Rejection: ${course.rejectionReason}` : "Students cannot see this until an admin publishes it."}</p>
       <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-        {editable && <button className="btn btn-primary" onClick={() => onAct(`/api/v1/instructor/courses/${course.id}/submit`)}>Submit for review</button>}
+        {editable && <button className="btn btn-primary" onClick={() => onAct(`/api/v1/instructor/courses/${course.id}/submit`)}>Publish course</button>}
         {course.status === "PENDING_REVIEW" && <button className="btn btn-ghost" onClick={() => onAct(`/api/v1/instructor/courses/${course.id}/withdraw`)}>Withdraw</button>}
         <button className="btn btn-danger" onClick={deleteCourse}>Delete course</button>
         <button className="btn btn-ghost" onClick={assist}>Ask for a draft suggestion</button>
@@ -309,6 +323,7 @@ function Editor({ course, onChange, onAct, onReload }: {
           <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
             <input defaultValue={section.title} id={`section-${section.sectionId}`} />
             <button className="btn btn-ghost" onClick={() => saveSection(section.sectionId, (document.getElementById(`section-${section.sectionId}`) as HTMLInputElement).value)}>Save section</button>
+            <button className="btn btn-danger" onClick={() => deleteSection(section.sectionId)}>Delete section</button>
             {section.status !== "ACTIVE" && <span className="muted">removed</span>}
           </div>
           {section.lessons.map((lesson) => (
@@ -319,6 +334,7 @@ function Editor({ course, onChange, onAct, onReload }: {
                 <button className="btn btn-ghost" onClick={() => saveLesson(lesson.lessonId,
                   (document.getElementById(`lesson-title-${lesson.lessonId}`) as HTMLInputElement).value,
                   (document.getElementById(`lesson-desc-${lesson.lessonId}`) as HTMLTextAreaElement).value)}>Save lesson text</button>
+                <button className="btn btn-danger" onClick={() => deleteLesson(lesson.lessonId)}>Delete lesson</button>
                 <input type="file" accept="video/mp4,video/webm" onChange={(event) => {
                   const file = event.target.files?.[0];
                   if (file) void upload(lesson.lessonId, file);
