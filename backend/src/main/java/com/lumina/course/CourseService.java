@@ -248,9 +248,6 @@ public class CourseService {
 
     public void deleteDraft(AuthUser actor, String courseId) {
         Course course = owned(actor, courseId);
-        if (course.getStatus() != CourseStatus.DRAFT && course.getStatus() != CourseStatus.REJECTED) {
-            throw Errors.conflict("INVALID_STATE", "Published courses must be archived by an admin.");
-        }
         if (enrollments.countByCourseId(courseId) > 0) {
             throw Errors.conflict("HAS_ENROLLMENTS", "This course has enrollments and cannot be deleted.");
         }

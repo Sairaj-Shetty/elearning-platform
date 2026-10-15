@@ -144,6 +144,15 @@ function Editor({ course, onChange, onAct, onReload }: {
   const [sectionId, setSectionId] = useState(course.sections[0]?.sectionId || "");
   const [suggestion, setSuggestion] = useState<{ description?: string; objectives?: string[]; sectionTitles?: string[]; message?: string; aiAvailable?: boolean } | null>(null);
   const editable = course.status === "DRAFT" || course.status === "REJECTED";
+  const [title, setTitle] = useState(course.title);
+  const [shortDescription, setShortDescription] = useState(course.shortDescription);
+  const [description, setDescription] = useState(course.description);
+  const [thumbFile, setThumbFile] = useState<File | null>(null);
+  useEffect(() => {
+    setTitle(course.title);
+    setShortDescription(course.shortDescription);
+    setDescription(course.description);
+  }, [course]);
 
   async function addSection(event: FormEvent) {
     event.preventDefault();
@@ -165,6 +174,62 @@ function Editor({ course, onChange, onAct, onReload }: {
     } catch (err) {
       toast(apiErrorMessage(err), "bad");
     }
+  }
+  async function saveCourse(event: FormEvent) {
+    event.preventDefault();
+    try {
+      onChange(await api<CourseDetail>(`/api/v1/instructor/courses/${course.id}`, {
+        method: "PUT",
+        body: JSON.stringify({
+          title, shortDescription, description,
+          categoryId: course.categoryId, domain: course.domain, difficulty: course.difficulty, language: course.language,
+          learningObjectives: course.learningObjectives, prerequisites: course.prerequisites, targetAudience: course.targetAudience,
+          tags: course.tags, skills: course.skills
+        })
+      }));
+      toast("Course details saved.");
+      await onReload();
+    } catch (err) { toast(apiErrorMessage(err), "bad"); }
+  }
+  async function saveSection(sectionId: string, newTitle: string) {
+    try {
+      onChange(await api<CourseDetail>(`/api/v1/instructor/courses/${course.id}/sections/${sectionId}`, { method: "PUT", body: JSON.stringify({ title: newTitle, description: "" }) }));
+      toast("Section saved.");
+    } catch (err) { toast(apiErrorMessage(err), "bad"); }
+  }
+  async function saveLesson(lessonId: string, newTitle: string, newDescription: string) {
+    try {
+      onChange(await api<CourseDetail>(`/api/v1/instructor/courses/${course.id}/lessons/${lessonId}`, { method: "PUT", body: JSON.stringify({
+        title: newTitle, description: newDescription, objectives: [], estimatedDurationMinutes: 8, access: "ENROLLED_ONLY", resources: []
+      }) }));
+      toast("Lesson text saved.");
+    } catch (err) { toast(apiErrorMessage(err), "bad"); }
+  }
+  async function uploadThumbnail() {
+    if (!thumbFile) return;
+    const body = new FormData();
+    body.append("file", thumbFile);
+    try {
+      await api(`/api/v1/instructor/courses/${course.id}/thumbnail`, { method: "POST", body });
+      setThumbFile(null);
+      onChange(await api<CourseDetail>(`/api/v1/instructor/courses/${course.id}`));
+      toast("Thumbnail saved.");
+    } catch (err) { toast(apiErrorMessage(err), "bad"); }
+  }
+  async function deleteVideo(lessonId: string) {
+    try {
+      await api(`/api/v1/instructor/courses/${course.id}/lessons/${lessonId}/video`, { method: "DELETE" });
+      onChange(await api<CourseDetail>(`/api/v1/instructor/courses/${course.id}`));
+      toast("Video removed.");
+    } catch (err) { toast(apiErrorMessage(err), "bad"); }
+  }
+  async function deleteCourse() {
+    if (!window.confirm("Delete this course? This cannot be undone.")) return;
+    try {
+      await api(`/api/v1/instructor/courses/${course.id}`, { method: "DELETE" });
+      toast("Course deleted.");
+      onReload();
+    } catch (err) { toast(apiErrorMessage(err), "bad"); }
   }
   async function upload(lessonId: string, file: File) {
     const body = new FormData();
@@ -206,12 +271,23 @@ function Editor({ course, onChange, onAct, onReload }: {
   return (
     <div style={{ display: "grid", gap: 12 }}>
       <p><Link to="/teach">All courses</Link></p>
-      <h2>{course.title}</h2>
+      <form onSubmit={saveCourse} className="card" style={{ padding: 12, display: "grid", gap: 8 }}>
+        <h2>Course details</h2>
+        <label className="field"><span>Title</span><input value={title} onChange={(event) => setTitle(event.target.value)} required /></label>
+        <label className="field"><span>Short description</span><input value={shortDescription} onChange={(event) => setShortDescription(event.target.value)} required /></label>
+        <label className="field"><span>Full description</span><textarea value={description} onChange={(event) => setDescription(event.target.value)} required /></label>
+        <button className="btn btn-primary" type="submit">Save course details</button>
+      </form>
+      <div style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
+        <label className="field"><span>Thumbnail</span><input type="file" accept="image/*" onChange={(event) => setThumbFile(event.target.files?.[0] || null)} /></label>
+        <button className="btn btn-ghost" onClick={uploadThumbnail}>Save thumbnail</button>
+        {course.thumbnailUrl && <img src={course.thumbnailUrl} alt="thumbnail" style={{ width: 96, height: 54, objectFit: "cover", borderRadius: 8 }} />}
+      </div>
       <p className="muted">Status {course.status}. {course.rejectionReason ? `Rejection: ${course.rejectionReason}` : "Students cannot see this until an admin publishes it."}</p>
       <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
         {editable && <button className="btn btn-primary" onClick={() => onAct(`/api/v1/instructor/courses/${course.id}/submit`)}>Submit for review</button>}
         {course.status === "PENDING_REVIEW" && <button className="btn btn-ghost" onClick={() => onAct(`/api/v1/instructor/courses/${course.id}/withdraw`)}>Withdraw</button>}
-        {editable && <button className="btn btn-danger" onClick={() => onAct(`/api/v1/instructor/courses/${course.id}`, "DELETE").then(() => onReload())}>Delete draft</button>}
+        <button className="btn btn-danger" onClick={deleteCourse}>Delete course</button>
         <button className="btn btn-ghost" onClick={assist}>Ask for a draft suggestion</button>
       </div>
       {suggestion && (
@@ -230,14 +306,26 @@ function Editor({ course, onChange, onAct, onReload }: {
       </form>
       {course.sections.map((section) => (
         <div key={section.sectionId} className="card" style={{ padding: 12 }}>
-          <strong>{section.title}</strong> {section.status !== "ACTIVE" && <span className="muted">removed</span>}
+          <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
+            <input defaultValue={section.title} id={`section-${section.sectionId}`} />
+            <button className="btn btn-ghost" onClick={() => saveSection(section.sectionId, (document.getElementById(`section-${section.sectionId}`) as HTMLInputElement).value)}>Save section</button>
+            {section.status !== "ACTIVE" && <span className="muted">removed</span>}
+          </div>
           {section.lessons.map((lesson) => (
             <div key={lesson.lessonId} style={{ display: "grid", gap: 6, padding: "8px 0", borderTop: "1px solid var(--line)" }}>
-              <span>{lesson.title} · {lesson.videoStatus} · {lesson.access}</span>
-              <input type="file" accept="video/mp4,video/webm" onChange={(event) => {
-                const file = event.target.files?.[0];
-                if (file) void upload(lesson.lessonId, file);
-              }} />
+              <input defaultValue={lesson.title} id={`lesson-title-${lesson.lessonId}`} placeholder="Lesson title" />
+              <textarea defaultValue={lesson.description} id={`lesson-desc-${lesson.lessonId}`} placeholder="Lesson text" />
+              <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                <button className="btn btn-ghost" onClick={() => saveLesson(lesson.lessonId,
+                  (document.getElementById(`lesson-title-${lesson.lessonId}`) as HTMLInputElement).value,
+                  (document.getElementById(`lesson-desc-${lesson.lessonId}`) as HTMLTextAreaElement).value)}>Save lesson text</button>
+                <input type="file" accept="video/mp4,video/webm" onChange={(event) => {
+                  const file = event.target.files?.[0];
+                  if (file) void upload(lesson.lessonId, file);
+                }} />
+                {lesson.videoStatus === "READY" && <button className="btn btn-danger" onClick={() => deleteVideo(lesson.lessonId)}>Delete video</button>}
+                <span className="muted">{lesson.title} · {lesson.videoStatus} · {lesson.access}</span>
+              </div>
             </div>
           ))}
         </div>

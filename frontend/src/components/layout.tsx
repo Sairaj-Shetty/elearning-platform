@@ -55,17 +55,27 @@ export function AppLayout() {
   if (!user) return <PublicLayout />;
   const links = linksFor(user.role, unread);
   return (
-    <div className="shell side" style={{ padding: "22px 0 64px" }}>
-      <aside className="card" style={{ padding: 14, alignSelf: "start", display: "grid", gap: 8 }}>
-        <NavLink to="/" className="brand"><span className="mark">L</span> Lumina</NavLink>
-        <p style={{ margin: "8px 0 0" }}><strong>{user.fullName}</strong><br /><span className="muted">{user.role}</span></p>
-        {links.map((link) => (
-          <NavLink key={link.to} to={link.to} style={({ isActive }) => ({ fontWeight: isActive ? 700 : 500 })}>{link.label}</NavLink>
-        ))}
-        <ThemeButton />
-        <button className="btn btn-ghost" onClick={() => logout().then(() => navigate("/"))}>Sign out</button>
-      </aside>
-      <section><Outlet /></section>
+    <div style={{ minHeight: "100vh" }}>
+      <header className="nav" style={{ position: "sticky", top: 0, zIndex: 10 }}>
+        <div className="shell" style={{ display: "flex", alignItems: "center", gap: 12, minHeight: 64, flexWrap: "wrap" }}>
+          <NavLink to="/" className="brand"><span className="mark">L</span> Lumina</NavLink>
+          <nav style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+            {links.map((link) => (
+              <NavLink key={link.to} to={link.to} style={({ isActive }) => ({ fontWeight: isActive ? 700 : 500 })}>{link.label}</NavLink>
+            ))}
+          </nav>
+          <div style={{ marginLeft: "auto", display: "flex", gap: 8, alignItems: "center" }}>
+            <ThemeButton />
+            <NavLink to={homeFor(user.role)} className="btn btn-ghost">
+              {user.avatarUrl ? <img src={user.avatarUrl} alt="" style={{ width: 28, height: 28, borderRadius: "50%", objectFit: "cover", verticalAlign: "middle" }} /> : null}
+              {" "}Dashboard
+            </NavLink>
+            <NavLink to="/profile" className="btn btn-ghost">{user.fullName}</NavLink>
+            <button className="btn btn-ghost" onClick={() => logout().then(() => navigate("/"))}>Sign out</button>
+          </div>
+        </div>
+      </header>
+      <main className="shell" style={{ padding: "22px 0 64px" }}><Outlet /></main>
     </div>
   );
 }
