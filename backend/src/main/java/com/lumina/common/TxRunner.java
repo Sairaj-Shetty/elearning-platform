@@ -1,17 +1,18 @@
 package com.lumina.common;
 
 import com.lumina.config.MongoCapabilities;
+import org.springframework.data.mongodb.MongoDatabaseFactory;
+import org.springframework.data.mongodb.MongoTransactionManager;
 import org.springframework.stereotype.Component;
-import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.support.TransactionTemplate;
 
 @Component
 public class TxRunner {
-    private final PlatformTransactionManager transactionManager;
+    private final MongoTransactionManager transactionManager;
     private final MongoCapabilities capabilities;
 
-    public TxRunner(PlatformTransactionManager transactionManager, MongoCapabilities capabilities) {
-        this.transactionManager = transactionManager;
+    public TxRunner(MongoDatabaseFactory databaseFactory, MongoCapabilities capabilities) {
+        this.transactionManager = new MongoTransactionManager(databaseFactory);
         this.capabilities = capabilities;
     }
 

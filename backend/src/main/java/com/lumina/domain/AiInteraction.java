@@ -17,7 +17,7 @@ import java.time.Instant;
 public class AiInteraction {
     @Id
     private String id;
-    @Indexed
+    
     private String userId;
     private AiFeature feature;
     private String courseId;

@@ -19,7 +19,7 @@ import java.util.List;
 public class AiSession {
     @Id
     private String id;
-    @Indexed
+    
     private String userId;
     private AiFeature feature;
     private String courseId;
