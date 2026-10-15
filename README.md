@@ -42,7 +42,7 @@ cp .env.example .env
 docker compose up --build
 ```
 
-Open http://localhost:3000. The API is at http://localhost:8080. Swagger UI is at http://localhost:8080/swagger-ui.html.
+Open http://localhost:5173. The API is at http://localhost:8080. Swagger UI is at http://localhost:8080/swagger-ui.html.
 
 Compose starts MongoDB as a one-node replica set named `rs0` and stores data in the `mongo_data` volume. Video files go to the `media_data` volume. `docker compose restart` keeps both. `docker compose down -v` deletes them on purpose.
 
