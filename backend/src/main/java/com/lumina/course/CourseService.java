@@ -227,7 +227,8 @@ public class CourseService {
         if (!problems.isEmpty()) {
             throw new com.lumina.common.ApiException(org.springframework.http.HttpStatus.BAD_REQUEST, "NOT_READY", "The course is not ready for review.", problems);
         }
-        course.setStatus(CourseStatus.PENDING_REVIEW);
+        course.setStatus(CourseStatus.PUBLISHED);
+        course.setPublishedAt(Instant.now());
         course.setSubmittedAt(Instant.now());
         course.setRejectionReason(null);
         touch(course);
