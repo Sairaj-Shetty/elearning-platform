@@ -26,6 +26,5 @@ public class AiInteraction {
     private String model;
     private String promptSummary;
     private Instant createdAt;
-    @Indexed
     private Instant expiresAt;
 }

@@ -26,7 +26,6 @@ public class AiSession {
     private String lessonId;
     private List<Message> messages = new ArrayList<>();
     private Instant updatedAt;
-    @Indexed
     private Instant expiresAt;
 
     @Getter

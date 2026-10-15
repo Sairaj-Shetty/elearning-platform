@@ -101,6 +101,12 @@ public final class Views {
 
     public record NotificationView(String id, String type, String title, String body, String link, boolean read, Instant createdAt) {}
 
+    public record CertificateView(
+            String id, String certificateId, String studentId, String studentName,
+            String courseId, String courseTitle, Instant completedAt, Instant completionDate,
+            Instant issuedAt, boolean seedData
+    ) {}
+
     public record StudentDashboard(
             int enrolledCount, int completedCount, int inProgressCount, double averageProgress,
             List<EnrollmentView> continueLearning, List<HistoryItem> recentEvents
@@ -112,7 +118,14 @@ public final class Views {
             int lessonsWithVideo, int totalLessons, List<CourseCard> recentCourses, List<LearnerRow> recentEnrollments
     ) {}
 
-    public record LearnerRow(String studentName, String courseTitle, String courseId, double progressPercent, Instant enrolledAt) {}
+    public record LearnerRow(
+            String studentName, String name, String studentEmail, String email,
+            String courseTitle, String courseId,
+            double progressPercent, double progress,
+            int completedLessonCount, int completedLessons, int countableLessonCount,
+            String lastLessonId, String lastLesson, String lastLessonTitle,
+            Instant enrolledAt
+    ) {}
 
     public record AdminDashboard(
             long students, long instructors, long admins,

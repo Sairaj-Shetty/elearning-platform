@@ -7,6 +7,7 @@ import com.lumina.api.Requests.ProfileRequest;
 import com.lumina.api.Requests.ProgressRequest;
 import com.lumina.api.Requests.ReportRequest;
 import com.lumina.api.Requests.ReviewRequest;
+import com.lumina.api.Views.CertificateView;
 import com.lumina.api.Views.EnrollmentView;
 import com.lumina.api.Views.HistoryItem;
 import com.lumina.api.Views.NoteView;
@@ -74,6 +75,12 @@ public class LearningController {
         return ApiResponse.ok(learning.myEnrollments(SecurityUtils.requireUser()));
     }
 
+    @GetMapping("/me/progress")
+    public ApiResponse<List<ProgressView>> progressList(@RequestParam(required = false) String courseId) {
+        if (courseId == null || courseId.isBlank()) return ApiResponse.ok(List.of());
+        return ApiResponse.ok(learning.progressForCourse(SecurityUtils.requireUser(), courseId));
+    }
+
     @PutMapping("/me/progress")
     public ApiResponse<ProgressView> progress(@Valid @RequestBody ProgressRequest request) {
         return ApiResponse.ok(learning.updateProgress(SecurityUtils.requireUser(), request));
@@ -113,6 +120,22 @@ public class LearningController {
     @PostMapping("/reports")
     public ApiResponse<String> report(@Valid @RequestBody ReportRequest request) {
         return ApiResponse.ok(admin.createReport(SecurityUtils.requireUser(), request).getId());
+    }
+
+    @GetMapping("/me/certificates")
+    public ApiResponse<List<CertificateView>> certificates() {
+        return ApiResponse.ok(learning.myCertificates(SecurityUtils.requireUser()));
+    }
+
+    @GetMapping("/me/certificates/{id}")
+    public ApiResponse<CertificateView> certificate(@PathVariable String id) {
+        return ApiResponse.ok(learning.certificate(SecurityUtils.requireUser(), id));
+    }
+
+    @GetMapping("/me/notifications/unread-count")
+    public ApiResponse<Long> unreadCount() {
+        String userId = SecurityUtils.requireUser().id();
+        return ApiResponse.ok(notifications.countByUserIdAndReadFalse(userId));
     }
 
     @GetMapping("/me/notifications")

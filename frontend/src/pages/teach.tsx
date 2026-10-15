@@ -41,6 +41,7 @@ export function TeachPage() {
   const [dash, setDash] = useState<Dash | null>(null);
   const [courses, setCourses] = useState<CourseCard[]>([]);
   const [course, setCourse] = useState<CourseDetail | null>(null);
+  const [roster, setRoster] = useState<any[]>([]);
   const [error, setError] = useState<string | null>(null);
 
   async function loadList() {
@@ -62,6 +63,7 @@ export function TeachPage() {
       return;
     }
     api<CourseDetail>(`/api/v1/instructor/courses/${courseId}`).then(setCourse).catch((err) => setError(apiErrorMessage(err)));
+    if (courseId) api<any[]>(`/api/v1/instructor/courses/${courseId}/learners`).then(setRoster).catch(() => setRoster([]));
   }, [courseId]);
 
   async function act(path: string, method = "POST") {
@@ -106,6 +108,26 @@ export function TeachPage() {
         </div>
       )}
       {course && <Editor course={course} onChange={setCourse} onAct={act} onReload={loadList} />}
+      {course && (
+        <div className="card" style={{ padding: 12 }}>
+          <h3>Roster</h3>
+          <table className="table">
+            <thead><tr><th>Name</th><th>Email</th><th>Progress</th><th>Completed</th><th>Last lesson</th></tr></thead>
+            <tbody>
+              {roster.map((row: any, index: number) => (
+                <tr key={index}>
+                  <td>{row.studentName || row.name}</td>
+                  <td>{row.studentEmail || row.email}</td>
+                  <td>{row.progressPercent ?? row.progress}%</td>
+                  <td>{row.completedLessonCount ?? row.completedLessons} of {row.countableLessonCount}</td>
+                  <td>{row.lastLessonTitle || row.lastLesson || row.lastLessonId || "—"}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          {roster.length === 0 && <p className="muted">No enrolled students yet.</p>}
+        </div>
+      )}
     </div>
   );
 }

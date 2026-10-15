@@ -4,7 +4,7 @@ import { useAuth } from "./lib/auth";
 import type { Role } from "./lib/types";
 import { AppLayout, PublicLayout } from "./components/layout";
 import { CatalogPage, CoursePage, HomePage, InstructorPage, LoginPage, RegisterPage } from "./pages/public";
-import { AssistantPage, DashboardPage, HistoryPage, LearnPlayer, NotificationsPage, ProfilePage, RoadmapPage } from "./pages/learn";
+import { AssistantPage, CertificatePage, DashboardPage, HistoryPage, LearnPlayer, NotificationsPage, ProfilePage, RoadmapPage } from "./pages/learn";
 import { InsightsPage, NewCoursePage, TeachPage } from "./pages/teach";
 import { AdminPage } from "./pages/admin";
 
@@ -25,6 +25,7 @@ export function App() {
         <Route path="/learn/roadmap" element={<RoadmapPage />} />
         <Route path="/learn/assistant" element={<AssistantPage />} />
         <Route path="/learn/:slug/lessons/:lessonId" element={<LearnPlayer />} />
+        <Route path="/certificates/:id" element={<CertificatePage />} />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/notifications" element={<NotificationsPage />} />
         <Route path="/teach" element={<RoleGate role="INSTRUCTOR"><TeachPage /></RoleGate>} />

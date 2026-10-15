@@ -284,9 +284,16 @@ public class CourseService {
                 .sorted(Comparator.comparing(Enrollment::getEnrolledAt, Comparator.nullsLast(Comparator.reverseOrder())))
                 .limit(6)
                 .map(item -> {
-                    String name = names.computeIfAbsent(item.getStudentId(), id -> users.findById(id).map(User::getFullName).orElse("Student"));
+                    User user = users.findById(item.getStudentId()).orElse(null);
+                    String name = user == null ? "Student" : user.getFullName();
+                    String email = user == null ? null : user.getEmail();
                     Course course = byId.get(item.getCourseId());
-                    return new LearnerRow(name, course == null ? "Course" : course.getTitle(), item.getCourseId(), item.getProgressPercent(), item.getEnrolledAt());
+                    String title = course == null ? "Course" : course.getTitle();
+                    String lastLessonTitle = course == null ? null : CourseFinder.lessonTitle(course, item.getLastLessonId());
+                    return new LearnerRow(name, name, email, email, title, item.getCourseId(),
+                            item.getProgressPercent(), item.getProgressPercent(),
+                            item.getCompletedLessonCount(), item.getCompletedLessonCount(), item.getCountableLessonCount(),
+                            item.getLastLessonId(), lastLessonTitle, lastLessonTitle, item.getEnrolledAt());
                 }).toList();
         List<CourseCard> recentCourses = mine.stream()
                 .sorted(Comparator.comparing(Course::getUpdatedAt, Comparator.nullsLast(Comparator.reverseOrder())))
@@ -301,12 +308,16 @@ public class CourseService {
         Course course = owned(actor, courseId);
         return enrollments.findByCourseId(courseId).stream()
                 .sorted(Comparator.comparing(Enrollment::getEnrolledAt, Comparator.nullsLast(Comparator.reverseOrder())))
-                .map(item -> new LearnerRow(
-                        users.findById(item.getStudentId()).map(User::getFullName).orElse("Student"),
-                        course.getTitle(),
-                        course.getId(),
-                        item.getProgressPercent(),
-                        item.getEnrolledAt()))
+                .map(item -> {
+                    User student = users.findById(item.getStudentId()).orElse(null);
+                    String name = student == null ? "Student" : student.getFullName();
+                    String email = student == null ? null : student.getEmail();
+                    String lastLessonTitle = CourseFinder.lessonTitle(course, item.getLastLessonId());
+                    return new LearnerRow(name, name, email, email, course.getTitle(), course.getId(),
+                            item.getProgressPercent(), item.getProgressPercent(),
+                            item.getCompletedLessonCount(), item.getCompletedLessonCount(), item.getCountableLessonCount(),
+                            item.getLastLessonId(), lastLessonTitle, lastLessonTitle, item.getEnrolledAt());
+                })
                 .toList();
     }
 
