@@ -15,6 +15,7 @@ import com.lumina.common.Pages;
 import com.lumina.common.Pages.PageData;
 import com.lumina.course.CourseCardFactory;
 import com.lumina.course.CourseFinder;
+import com.lumina.domain.Certificate;
 import com.lumina.domain.Course;
 import com.lumina.domain.Enrollment;
 import com.lumina.domain.Enums.CourseStatus;
@@ -29,6 +30,7 @@ import com.lumina.domain.Note;
 import com.lumina.domain.Review;
 import com.lumina.domain.User;
 import com.lumina.notify.NotificationService;
+import com.lumina.repo.CertificateRepository;
 import com.lumina.repo.CourseRepository;
 import com.lumina.repo.EnrollmentRepository;
 import com.lumina.repo.LearningEventRepository;
@@ -55,6 +57,7 @@ import java.util.List;
 @Service
 public class LearningService {
     private final CourseRepository courses;
+    private final CertificateRepository certificates;
     private final EnrollmentRepository enrollments;
     private final LessonProgressRepository progressRepo;
     private final LearningEventRepository events;
@@ -67,10 +70,11 @@ public class LearningService {
     private final Clock clock;
     private final WatchProgressPolicy policy = new WatchProgressPolicy();
 
-    public LearningService(CourseRepository courses, EnrollmentRepository enrollments, LessonProgressRepository progressRepo,
+    public LearningService(CourseRepository courses, CertificateRepository certificates, EnrollmentRepository enrollments, LessonProgressRepository progressRepo,
                            LearningEventRepository events, NoteRepository notes, ReviewRepository reviews, UserRepository users,
                            NotificationService notifications, CourseCardFactory cards, MongoTemplate mongo, Clock clock) {
         this.courses = courses;
+        this.certificates = certificates;
         this.enrollments = enrollments;
         this.progressRepo = progressRepo;
         this.events = events;
@@ -192,6 +196,14 @@ public class LearningService {
         return toProgress(progress, result.justCompleted() ? "Lesson completed." : "Progress saved.");
     }
 
+    public List<ProgressView> progressForCourse(AuthUser actor, String courseId) {
+        return progressRepo.findByStudentIdAndCourseId(actor.id(), courseId).stream()
+                .map(item -> new ProgressView(item.getLessonId(), item.getCourseId(), item.getStatus().name(),
+                        item.getLastPositionSeconds(), item.getDurationSeconds(), item.getAccumulatedWatchSeconds(),
+                        item.getMaxWatchedPercent(), item.getStatus() == ProgressStatus.COMPLETED, "Saved progress."))
+                .toList();
+    }
+
     public ProgressView complete(AuthUser actor, CompleteRequest request) {
         Enrollment enrollment = requireEnrollment(actor.id(), request.courseId());
         Course course = courses.findById(request.courseId()).orElseThrow(() -> Errors.notFound("Course not found."));
@@ -284,6 +296,11 @@ public class LearningService {
             enrollment.setStatus(EnrollmentStatus.COMPLETED);
             enrollment.setCompletedAt(clock.instant());
             event(enrollment.getStudentId(), course.getId(), null, EventType.COURSE_COMPLETED, null);
+            issueCertificate(enrollment.getStudentId(), course.getId(), course.getTitle(), enrollment.getCompletedAt());
+            User student = users.findById(enrollment.getStudentId()).orElse(null);
+            String studentName = student == null ? "A student" : student.getFullName();
+            notifications.notify(course.getInstructorId(), "COURSE_COMPLETED", "Course completed",
+                    studentName + " completed " + course.getTitle(), "/teach/" + course.getId());
         }
         enrollments.save(enrollment);
     }
@@ -293,6 +310,42 @@ public class LearningService {
         progress.setCompletedAt(clock.instant());
         progress.setCompletionMethod(method);
         progress.setMaxWatchedPercent(Math.max(progress.getMaxWatchedPercent(), 100));
+    }
+
+    private void issueCertificate(String studentId, String courseId, String courseTitle, Instant completedAt) {
+        if (certificates.findByStudentIdAndCourseId(studentId, courseId).isPresent()) return;
+        User student = users.findById(studentId).orElse(null);
+        String studentName = student == null ? "Student" : student.getFullName();
+        Certificate certificate = new Certificate();
+        certificate.setStudentId(studentId);
+        certificate.setCourseId(courseId);
+        certificate.setStudentName(studentName);
+        certificate.setCourseTitle(courseTitle);
+        certificate.setCompletedAt(completedAt);
+        certificate.setIssuedAt(clock.instant());
+        try {
+            certificates.save(certificate);
+        } catch (org.springframework.dao.DuplicateKeyException ignored) {
+            // one certificate per student and course
+        }
+    }
+
+    public List<com.lumina.api.Views.CertificateView> myCertificates(AuthUser actor) {
+        return certificates.findByStudentIdOrderByIssuedAtDesc(actor.id()).stream()
+                .map(this::toCertificate).toList();
+    }
+
+    public com.lumina.api.Views.CertificateView certificate(AuthUser actor, String id) {
+        Certificate certificate = certificates.findById(id).orElseThrow(() -> Errors.notFound("Certificate not found."));
+        if (!certificate.getStudentId().equals(actor.id())) throw Errors.forbidden("You can view only your own certificates.");
+        return toCertificate(certificate);
+    }
+
+    private com.lumina.api.Views.CertificateView toCertificate(Certificate certificate) {
+        return new com.lumina.api.Views.CertificateView(
+                certificate.getId(), certificate.getId(), certificate.getStudentId(), certificate.getStudentName(),
+                certificate.getCourseId(), certificate.getCourseTitle(), certificate.getCompletedAt(), certificate.getCompletedAt(),
+                certificate.getIssuedAt(), certificate.isSeedData());
     }
 
     private Enrollment requireEnrollment(String studentId, String courseId) {

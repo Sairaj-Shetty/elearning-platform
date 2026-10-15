@@ -46,9 +46,14 @@ export function PublicLayout() {
 export function AppLayout() {
   const { user, logout, ready } = useAuth();
   const navigate = useNavigate();
+  const [unread, setUnread] = useState(0);
+  useEffect(() => {
+    if (!user) return;
+    api<number>("/api/v1/me/notifications/unread-count").then(setUnread).catch(() => setUnread(0));
+  }, [user]);
   if (!ready) return <p className="shell">Checking your session…</p>;
   if (!user) return <PublicLayout />;
-  const links = linksFor(user.role);
+  const links = linksFor(user.role, unread);
   return (
     <div className="shell side" style={{ padding: "22px 0 64px" }}>
       <aside className="card" style={{ padding: 14, alignSelf: "start", display: "grid", gap: 8 }}>
@@ -83,8 +88,8 @@ function homeFor(role: string) {
   return "/learn";
 }
 
-function linksFor(role: string) {
-  const common = [{ to: "/courses", label: "Catalog" }, { to: "/profile", label: "Profile" }, { to: "/notifications", label: "Notifications" }];
+function linksFor(role: string, unread = 0) {
+  const common = [{ to: "/courses", label: "Catalog" }, { to: "/profile", label: "Profile" }, { to: "/notifications", label: unread ? `Notifications (${unread})` : "Notifications" }];
   if (role === "ADMIN") return [{ to: "/admin", label: "Overview" }, { to: "/admin/users", label: "Users" }, { to: "/admin/courses", label: "Moderation" }, { to: "/admin/categories", label: "Categories" }, { to: "/admin/reports", label: "Reports" }, { to: "/admin/audit", label: "Audit" }, ...common];
   if (role === "INSTRUCTOR") return [{ to: "/teach", label: "My courses" }, { to: "/teach/new", label: "New course" }, { to: "/teach/insights", label: "Insights" }, ...common];
   return [{ to: "/learn", label: "Dashboard" }, { to: "/learn/history", label: "History" }, { to: "/learn/roadmap", label: "Roadmap" }, { to: "/learn/assistant", label: "Study help" }, ...common];

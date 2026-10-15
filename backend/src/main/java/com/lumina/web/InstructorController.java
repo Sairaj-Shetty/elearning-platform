@@ -121,4 +121,9 @@ public class InstructorController {
     public ApiResponse<List<LearnerRow>> learners(@PathVariable String id) {
         return ApiResponse.ok(courses.learners(SecurityUtils.requireUser(), id));
     }
+
+    @GetMapping("/courses/{id}/roster")
+    public ApiResponse<List<LearnerRow>> roster(@PathVariable String id) {
+        return ApiResponse.ok(courses.learners(SecurityUtils.requireUser(), id));
+    }
 }

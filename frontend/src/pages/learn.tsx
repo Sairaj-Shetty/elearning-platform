@@ -39,10 +39,12 @@ interface Recommendation {
 export function DashboardPage() {
   const [data, setData] = useState<Dashboard | null>(null);
   const [recommendations, setRecommendations] = useState<Recommendation[]>([]);
+  const [certificates, setCertificates] = useState<{ id: string; studentName: string; courseTitle: string; completedAt: string }[]>([]);
   const [error, setError] = useState<string | null>(null);
   useEffect(() => {
     api<Dashboard>("/api/v1/me/dashboard").then(setData).catch((err) => setError(apiErrorMessage(err)));
     api<Recommendation[]>("/api/v1/ai/recommendations").then(setRecommendations).catch(() => setRecommendations([]));
+    api<{ id: string; studentName: string; courseTitle: string; completedAt: string }[]>("/api/v1/me/certificates").then(setCertificates).catch(() => setCertificates([]));
   }, []);
   if (error) return <Empty title="Dashboard unavailable" text={error} />;
   if (!data) return <p>Loading saved learning…</p>;
@@ -62,6 +64,16 @@ export function DashboardPage() {
         ))}
       </section>
       <section>
+        <h2>Certificates</h2>
+        {certificates.length === 0 && <p className="muted">A certificate is created when every countable lesson in a course is completed.</p>}
+        {certificates.map((cert) => (
+          <Link key={cert.id} className="card" style={{ display: "block", padding: 14, marginBottom: 8 }} to={`/certificates/${cert.id}`}>
+            <strong>{cert.courseTitle}</strong>
+            <div className="muted">{cert.studentName} · completed {new Date(cert.completedAt).toLocaleDateString()}</div>
+          </Link>
+        ))}
+      </section>
+      <section>
         <h2>Recent saved events</h2>
         {data.recentEvents.length === 0 && <p className="muted">Events appear after you enroll or record a lesson position.</p>}
         {data.recentEvents.map((item) => <p key={item.id}>{item.eventType} · {item.courseTitle} {item.lessonTitle} · {formatWhen(item.occurredAt)}</p>)}
@@ -73,7 +85,7 @@ export function DashboardPage() {
           {recommendations.map((item) => (
             <div key={item.course.id}>
               <CourseCardView course={item.course} />
-              <p className="muted">{item.explanation || item.reasons.join(" ")} · {item.source === "GEMINI" ? "Gemini explanation of the rule score" : "Rule score only"}</p>
+              <p className="muted">{item.explanation || item.reasons.join(" ")} · {item.source.includes("GEMINI") ? "Gemini explanation of the rule score" : "Rule score only. Gemini was not used."}</p>
             </div>
           ))}
         </div>
@@ -207,6 +219,7 @@ export function LearnPlayer() {
   const [error, setError] = useState<string | null>(null);
   const [note, setNote] = useState("");
   const [notes, setNotes] = useState<{ id: string; body: string; positionSeconds?: number | null }[]>([]);
+  const [completedLessons, setCompletedLessons] = useState<Set<string>>(new Set());
   const [tab, setTab] = useState<"notes" | "help" | "quiz">("notes");
   const [quiz, setQuiz] = useState<{ id: string; title: string; questions: { questionId: string; prompt: string; type: string; options: string[] }[] } | null>(null);
   const [score, setScore] = useState<string | null>(null);
@@ -231,6 +244,11 @@ export function LearnPlayer() {
     api<{ id: string; lessonId: string; body: string; positionSeconds?: number | null }[]>(`/api/v1/me/notes?courseId=${course.id}`)
       .then((rows) => setNotes(rows.filter((row) => row.lessonId === lesson.lessonId)))
       .catch(() => setNotes([]));
+    if (course.viewer.enrolled) {
+      api<{ lessonId: string; status: string }[]>(`/api/v1/me/progress?courseId=${course.id}`)
+        .then((rows) => setCompletedLessons(new Set(rows.filter((row) => row.status === "COMPLETED").map((row) => row.lessonId))))
+        .catch(() => setCompletedLessons(new Set()));
+    }
   }, [course, lesson]);
 
   useEffect(() => {
@@ -255,6 +273,7 @@ export function LearnPlayer() {
     if (!course || !lesson) return;
     try {
       await api("/api/v1/me/progress/complete", { method: "POST", body: JSON.stringify({ courseId: course.id, lessonId: lesson.lessonId }) });
+      setCompletedLessons((current) => new Set(current).add(lesson.lessonId));
       toast("Lesson marked complete from watched time.");
     } catch (err) {
       toast(apiErrorMessage(err), "bad");
@@ -309,7 +328,7 @@ export function LearnPlayer() {
             <div className="muted">{section.title}</div>
             {section.lessons.map((item) => (
               <Link key={item.lessonId} to={`/learn/${course.slug}/lessons/${item.lessonId}`} style={{ display: "block", padding: "6px 0", fontWeight: item.lessonId === lesson.lessonId ? 700 : 500 }}>
-                {item.title}
+                {completedLessons.has(item.lessonId) ? "✓ " : ""}{item.title}
               </Link>
             ))}
           </div>
@@ -372,7 +391,9 @@ export function ProfilePage() {
   const { user, refreshUser } = useAuth();
   const toast = useToast();
   const [form, setForm] = useState<Partial<User>>({});
+  const [certificates, setCertificates] = useState<{ id: string; courseTitle: string; completedAt: string }[]>([]);
   useEffect(() => { if (user) setForm(user); }, [user]);
+  useEffect(() => { api<{ id: string; courseTitle: string; completedAt: string }[]>("/api/v1/me/certificates").then(setCertificates).catch(() => setCertificates([])); }, []);
   async function save(event: FormEvent) {
     event.preventDefault();
     try {
@@ -387,6 +408,7 @@ export function ProfilePage() {
     }
   }
   return (
+    <div>
     <form onSubmit={save} className="card" style={{ padding: 18, display: "grid", gap: 10 }}>
       <h1>Profile</h1>
       <label className="field"><span>Name</span><input value={form.fullName || ""} onChange={(event) => setForm({ ...form, fullName: event.target.value })} /></label>
@@ -397,6 +419,12 @@ export function ProfilePage() {
       <label className="field"><span>Goals</span><input value={(form.learningGoals || []).join(", ")} onChange={(event) => setForm({ ...form, learningGoals: event.target.value.split(",").map((item) => item.trim()).filter(Boolean) })} /></label>
       <button className="btn btn-primary" type="submit">Save</button>
     </form>
+    <section style={{ marginTop: 16 }}>
+      <h2>Certificates</h2>
+      {certificates.length === 0 && <p className="muted">No certificates yet.</p>}
+      {certificates.map((cert) => <p key={cert.id}><Link to={`/certificates/${cert.id}`}>{cert.courseTitle}</Link> · {new Date(cert.completedAt).toLocaleDateString()}</p>)}
+    </section>
+  </div>
   );
 }
 
@@ -420,6 +448,28 @@ export function NotificationsPage() {
           <span className="muted">{item.read ? "Read" : "Unread"} · {formatWhen(item.createdAt)}</span>
         </button>
       ))}
+    </div>
+  );
+}
+
+export function CertificatePage() {
+  const { id } = useParams();
+  const [cert, setCert] = useState<{ id: string; studentName: string; courseTitle: string; completedAt: string; issuedAt: string } | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  useEffect(() => {
+    if (!id) return;
+    api<typeof cert>(`/api/v1/me/certificates/${id}`).then(setCert).catch((err) => setError(apiErrorMessage(err)));
+  }, [id]);
+  if (error) return <Empty title="Certificate unavailable" text={error} />;
+  if (!cert) return <p>Loading certificate…</p>;
+  return (
+    <div className="card" style={{ padding: 32, maxWidth: 720, margin: "0 auto" }}>
+      <h1>Certificate of completion</h1>
+      <p className="muted">Stored record {cert.id}</p>
+      <p><strong>{cert.studentName}</strong> completed <strong>{cert.courseTitle}</strong>.</p>
+      <p>Completion date: {new Date(cert.completedAt).toLocaleDateString()}</p>
+      <p>Issued: {new Date(cert.issuedAt).toLocaleDateString()}</p>
+      <button className="btn btn-ghost" onClick={() => window.print()}>Print / download</button>
     </div>
   );
 }
