@@ -392,6 +392,18 @@ export function ProfilePage() {
   const toast = useToast();
   const [form, setForm] = useState<Partial<User>>({});
   const [certificates, setCertificates] = useState<{ id: string; courseTitle: string; completedAt: string }[]>([]);
+  const [avatarFile, setAvatarFile] = useState<File | null>(null);
+  async function uploadAvatar() {
+    if (!avatarFile) return;
+    const body = new FormData();
+    body.append("file", avatarFile);
+    try {
+      await api("/me/avatar", { method: "POST", body });
+      setAvatarFile(null);
+      await refreshUser();
+      toast("Profile photo saved.");
+    } catch (err) { toast(apiErrorMessage(err), "bad"); }
+  }
   useEffect(() => { if (user) setForm(user); }, [user]);
   useEffect(() => { api<{ id: string; courseTitle: string; completedAt: string }[]>("/api/v1/me/certificates").then(setCertificates).catch(() => setCertificates([])); }, []);
   async function save(event: FormEvent) {
@@ -417,6 +429,9 @@ export function ProfilePage() {
       <label className="field"><span>Interests, comma separated</span><input value={(form.interests || []).join(", ")} onChange={(event) => setForm({ ...form, interests: event.target.value.split(",").map((item) => item.trim()).filter(Boolean) })} /></label>
       <label className="field"><span>Skills</span><input value={(form.skills || []).join(", ")} onChange={(event) => setForm({ ...form, skills: event.target.value.split(",").map((item) => item.trim()).filter(Boolean) })} /></label>
       <label className="field"><span>Goals</span><input value={(form.learningGoals || []).join(", ")} onChange={(event) => setForm({ ...form, learningGoals: event.target.value.split(",").map((item) => item.trim()).filter(Boolean) })} /></label>
+      <label className="field"><span>Profile photo</span><input type="file" accept="image/*" onChange={(event) => setAvatarFile(event.target.files?.[0] || null)} /></label>
+      <button className="btn btn-ghost" type="button" onClick={uploadAvatar}>Save profile photo</button>
+      {user?.avatarUrl && <img src={user.avatarUrl} alt="avatar" style={{ width: 64, height: 64, borderRadius: "50%", objectFit: "cover" }} />}
       <button className="btn btn-primary" type="submit">Save</button>
     </form>
     <section style={{ marginTop: 16 }}>
